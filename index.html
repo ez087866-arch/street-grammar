@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Street Grammar</title>
+<meta name="description" content="A psychogeography notebook of small street details from Wales, London, New York and Boston: tactile paving, Chinatown gates, Victorian arcades, theatres, plaques and the stories behind them.">
+<meta name="author" content="Eric Zhang">
+<meta name="theme-color" content="#13130f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23a3262a'/%3E%3Cg fill='%23f3f1e7'%3E%3Ccircle cx='9' cy='9' r='2.6'/%3E%3Ccircle cx='16' cy='9' r='2.6'/%3E%3Ccircle cx='23' cy='9' r='2.6'/%3E%3Ccircle cx='9' cy='16' r='2.6'/%3E%3Ccircle cx='16' cy='16' r='2.6'/%3E%3Ccircle cx='23' cy='16' r='2.6'/%3E%3Ccircle cx='9' cy='23' r='2.6'/%3E%3Ccircle cx='16' cy='23' r='2.6'/%3E%3Ccircle cx='23' cy='23' r='2.6'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Street Grammar">
+<meta property="og:description" content="A psychogeography notebook of small street details from Wales, London, New York and Boston: tactile paving, Chinatown gates, Victorian arcades, theatres, plaques and the stories behind them.">
+<meta property="og:url" content="https://ez087866-arch.github.io/street-grammar/">
+<meta property="og:image" content="https://ez087866-arch.github.io/street-grammar/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap&text=%E4%B8%8B%E5%80%AB%E5%85%AC%E5%88%B0%E5%8D%8E%E5%9D%8A%E5%9F%A0%E5%A4%A7%E5%A4%A9%E5%B8%82%E5%BA%97%E5%BB%89%E6%81%A5%E6%95%8F%E6%95%A6%E6%96%B0%E6%97%BA%E6%9D%A5%E6%AC%A2%E6%B8%AF%E7%82%BA%E7%A6%AE%E7%BE%A9%E8%8F%AF%E8%9E%BA%E8%A5%BF%E8%BF%8E%E9%92%89%E9%A3%AF">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Imperial+Script&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an "edition" notebook. Full-bleed photographs open each chapter, with a giant sans title over the
+   image; the reading pages are torn parchment with script initials. A fixed index on the left tracks the
+   chapter you're in, like a book's table of contents. One deliberate visual world: warm paper and ink. */
+:root{
+  color-scheme:light;
+  /* One neutral family with an olive-stone bias (hue about 52 degrees), like Portland stone and slate under a Welsh sky.
+     One accent, street red: the crimson of K6 kiosks, red blister paving and Chinatown lanterns, sampled from the photos
+     and used the way old books used red ink, for initials, markers and links. */
+  --paper:#e3e1d6;      /* page parchment */
+  --paper-hi:#ecebe1;   /* raised card stock */
+  --fiber:#f6f5ee;      /* torn-edge fibres, print mounts */
+  --rule:#c9c6b7;       /* hairlines */
+  --muted:#5f5d50;      /* captions and metadata: 5.0:1 on paper */
+  --ink-2:#38372c;      /* secondary text: 9.1:1 */
+  --ink:#1f1f17;        /* text: 12.6:1 */
+  --night:#13130f;      /* hero, openers, footer */
+  --chalk:#f3f1e7;      /* text on photographs and on night */
+  --rubric:#a3262a;     /* street red: 5.6:1 on paper */
+  --chalk-rgb:243 241 231;
+  --shade-rgb:19 19 15;
+  /* Type roles: sans for titles and wayfinding, serif for reading, mono for every label, script only for initials */
+  --sans:"Instrument Sans","Noto Serif TC","Noto Serif SC","Helvetica Neue",Arial,sans-serif;
+  --serif:"Newsreader","Noto Serif TC","Noto Serif SC",Georgia,"Times New Roman",serif;
+  --script:"Imperial Script","Snell Roundhand","Brush Script MT",cursive;
+  --mono:"DM Mono","Noto Serif TC","Noto Serif SC",ui-monospace,Menlo,monospace;
+  --label:500 .7rem/1.35 var(--mono);
+  --ix-w:236px;
+  --tear:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 60' preserveAspectRatio='none'%3E%3Cpath d='M0,60 L0.0,25.8 L5.6,30.0 L11.1,30.5 L16.7,26.2 L22.2,29.3 L27.8,21.8 L33.3,20.5 L38.9,18.7 L44.4,29.9 L50.0,29.4 L55.6,21.8 L61.1,22.5 L66.7,20.2 L72.2,16.7 L77.8,19.1 L83.3,18.8 L88.9,19.5 L94.4,17.4 L100.0,27.7 L105.6,29.9 L111.1,24.8 L116.7,21.4 L122.2,26.5 L127.8,30.2 L133.3,37.6 L138.9,27.5 L144.4,33.3 L150.0,37.6 L155.6,33.3 L161.1,33.7 L166.7,28.8 L172.2,36.2 L177.8,28.2 L183.3,22.4 L188.9,26.4 L194.4,28.5 L200.0,26.6 L205.6,22.0 L211.1,16.9 L216.7,13.5 L222.2,22.8 L227.8,21.5 L233.3,15.9 L238.9,22.1 L244.4,20.1 L250.0,13.3 L255.6,17.6 L261.1,14.4 L266.7,13.7 L272.2,12.0 L277.8,10.8 L283.3,17.3 L288.9,21.1 L294.4,13.9 L300.0,23.2 L305.6,17.0 L311.1,24.7 L316.7,21.8 L322.2,24.5 L327.8,20.8 L333.3,21.0 L338.9,17.2 L344.4,16.1 L350.0,14.9 L355.6,14.7 L361.1,8.0 L366.7,13.7 L372.2,12.7 L377.8,17.8 L383.3,13.3 L388.9,12.4 L394.4,11.5 L400.0,12.0 L405.6,16.0 L411.1,20.9 L416.7,23.0 L422.2,16.1 L427.8,16.6 L433.3,20.0 L438.9,13.5 L444.4,14.9 L450.0,15.5 L455.6,9.2 L461.1,15.3 L466.7,17.8 L472.2,23.1 L477.8,20.5 L483.3,26.5 L488.9,25.3 L494.4,28.2 L500.0,28.3 L505.6,30.3 L511.1,25.6 L516.7,32.6 L522.2,31.8 L527.8,35.0 L533.3,35.2 L538.9,29.5 L544.4,23.3 L550.0,21.1 L555.6,25.2 L561.1,29.0 L566.7,20.8 L572.2,22.8 L577.8,16.8 L583.3,24.8 L588.9,25.7 L594.4,22.7 L600.0,18.3 L605.6,25.2 L611.1,26.4 L616.7,26.9 L622.2,23.8 L627.8,29.8 L633.3,32.6 L638.9,25.1 L644.4,25.1 L650.0,22.8 L655.6,24.8 L661.1,25.0 L666.7,28.2 L672.2,20.8 L677.8,25.2 L683.3,30.5 L688.9,29.4 L694.4,20.0 L700.0,19.1 L705.6,24.4 L711.1,19.3 L716.7,23.4 L722.2,26.3 L727.8,31.6 L733.3,28.8 L738.9,28.0 L744.4,24.1 L750.0,24.8 L755.6,23.3 L761.1,26.6 L766.7,29.3 L772.2,28.2 L777.8,28.4 L783.3,36.6 L788.9,30.1 L794.4,33.9 L800.0,30.1 L805.6,35.3 L811.1,37.6 L816.7,36.8 L822.2,41.9 L827.8,41.8 L833.3,38.5 L838.9,43.5 L844.4,41.6 L850.0,39.2 L855.6,38.9 L861.1,33.8 L866.7,35.6 L872.2,30.4 L877.8,33.5 L883.3,36.6 L888.9,37.5 L894.4,28.9 L900.0,32.1 L905.6,35.3 L911.1,38.4 L916.7,39.9 L922.2,38.2 L927.8,36.1 L933.3,35.7 L938.9,39.0 L944.4,34.8 L950.0,41.0 L955.6,36.4 L961.1,39.0 L966.7,36.8 L972.2,38.0 L977.8,35.4 L983.3,42.5 L988.9,41.8 L994.4,39.5 L1000.0,38.0 L1000,60 Z' fill='black'/%3E%3C/svg%3E");
+  --tear2:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 60' preserveAspectRatio='none'%3E%3Cpath d='M0,60 L0.0,19.8 L5.6,24.0 L11.1,24.5 L16.7,20.2 L22.2,23.3 L27.8,15.8 L33.3,14.5 L38.9,12.7 L44.4,23.9 L50.0,23.4 L55.6,15.8 L61.1,16.5 L66.7,14.2 L72.2,10.7 L77.8,13.1 L83.3,12.8 L88.9,13.5 L94.4,11.4 L100.0,21.7 L105.6,23.9 L111.1,18.8 L116.7,15.4 L122.2,20.5 L127.8,24.2 L133.3,31.6 L138.9,21.5 L144.4,27.3 L150.0,31.6 L155.6,27.3 L161.1,27.7 L166.7,22.8 L172.2,30.2 L177.8,22.2 L183.3,16.4 L188.9,20.4 L194.4,22.5 L200.0,20.6 L205.6,16.0 L211.1,10.9 L216.7,7.5 L222.2,16.8 L227.8,15.5 L233.3,9.9 L238.9,16.1 L244.4,14.1 L250.0,7.3 L255.6,11.6 L261.1,8.4 L266.7,7.7 L272.2,6.0 L277.8,4.8 L283.3,11.3 L288.9,15.1 L294.4,7.9 L300.0,17.2 L305.6,11.0 L311.1,18.7 L316.7,15.8 L322.2,18.5 L327.8,14.8 L333.3,15.0 L338.9,11.2 L344.4,10.1 L350.0,8.9 L355.6,8.7 L361.1,2.4 L366.7,8.0 L372.2,7.0 L377.8,12.1 L383.3,7.6 L388.9,6.7 L394.4,5.8 L400.0,6.2 L405.6,10.2 L411.1,15.1 L416.7,17.2 L422.2,10.2 L427.8,10.7 L433.3,14.2 L438.9,7.6 L444.4,9.0 L450.0,9.6 L455.6,4.3 L461.1,10.3 L466.7,12.7 L472.2,17.9 L477.8,15.2 L483.3,21.3 L488.9,19.9 L494.4,22.8 L500.0,22.8 L505.6,24.8 L511.1,20.0 L516.7,27.0 L522.2,26.2 L527.8,29.4 L533.3,29.6 L538.9,23.8 L544.4,17.6 L550.0,15.4 L555.6,19.4 L561.1,23.3 L566.7,15.0 L572.2,17.0 L577.8,11.0 L583.3,19.0 L588.9,19.9 L594.4,16.8 L600.0,12.4 L605.6,19.3 L611.1,20.5 L616.7,21.0 L622.2,17.9 L627.8,23.9 L633.3,26.7 L638.9,19.2 L644.4,19.2 L650.0,16.8 L655.6,18.9 L661.1,19.0 L666.7,22.3 L672.2,14.8 L677.8,19.2 L683.3,24.5 L688.9,23.4 L694.4,14.0 L700.0,13.2 L705.6,18.4 L711.1,13.3 L716.7,17.4 L722.2,20.3 L727.8,25.6 L733.3,22.8 L738.9,22.1 L744.4,18.1 L750.0,18.8 L755.6,17.3 L761.1,20.6 L766.7,23.3 L772.2,22.2 L777.8,22.4 L783.3,30.6 L788.9,24.2 L794.4,27.9 L800.0,24.1 L805.6,29.3 L811.1,31.6 L816.7,30.8 L822.2,35.9 L827.8,35.8 L833.3,32.5 L838.9,37.5 L844.4,35.6 L850.0,33.2 L855.6,32.9 L861.1,27.8 L866.7,29.6 L872.2,24.4 L877.8,27.5 L883.3,30.6 L888.9,31.5 L894.4,22.9 L900.0,26.1 L905.6,29.3 L911.1,32.4 L916.7,33.9 L922.2,32.2 L927.8,30.1 L933.3,29.7 L938.9,33.0 L944.4,28.8 L950.0,35.0 L955.6,30.4 L961.1,33.0 L966.7,30.8 L972.2,32.0 L977.8,29.4 L983.3,36.5 L988.9,35.8 L994.4,33.5 L1000.0,32.0 L1000,60 Z' fill='black'/%3E%3C/svg%3E");
+  --gut:max(16px,env(safe-area-inset-left,0px));
+  --gut-r:max(16px,env(safe-area-inset-right,0px));
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.1rem/1.6 var(--serif);font-optical-sizing:auto;
+  -webkit-font-smoothing:antialiased}
+/* paper grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.38;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .42 0 0 0 0 .36 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rubric);outline-offset:3px}
+[id]{scroll-margin-top:24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- fixed index (desktop) ---------- */
+.index{position:fixed;left:0;top:0;bottom:0;width:var(--ix-w);z-index:40;display:flex;flex-direction:column;justify-content:space-between;
+  padding:calc(26px + env(safe-area-inset-top,0px)) 22px calc(22px + env(safe-area-inset-bottom,0px)) max(22px,env(safe-area-inset-left,0px));
+  color:var(--ink);transition:color .45s ease,opacity .45s ease;opacity:0;pointer-events:none}
+body.past-hero .index{opacity:1;pointer-events:auto}
+.ix-title{font:500 1.5rem/.98 var(--sans);letter-spacing:-.01em;text-decoration:none;display:block}
+.ix-title em{font:italic 400 1.62rem/0 var(--serif);letter-spacing:0}
+.ix-title small{display:block;margin-top:8px;font:400 .7rem/1.3 var(--mono);letter-spacing:.02em;opacity:.7}
+.ix-list{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.ix-list a{display:flex;align-items:baseline;gap:6px;text-decoration:none;font:500 1.02rem/1.12 var(--sans);letter-spacing:-.01em;opacity:.42;transition:opacity .3s}
+.ix-list a:hover{opacity:.8}
+.ix-list a .lead{flex:1;border-bottom:1px dotted currentColor;opacity:0;transform:translateY(-3px);transition:opacity .3s}
+.ix-list a .num{font:400 .7rem/1 var(--serif);letter-spacing:.04em;min-width:2.4em;text-align:right}
+.ix-list a[aria-current="true"]{opacity:1}
+.ix-list a[aria-current="true"] .lead{opacity:.6}
+.ix-foot{font:400 .68rem/1.5 var(--mono);opacity:.7}
+.ix-foot a{text-decoration:none}
+
+/* ---------- mobile bar + index sheet ---------- */
+.mbar{display:none}
+@media (max-width:1099px){
+  .index{display:none}
+  .mbar{display:flex;position:fixed;z-index:45;top:calc(10px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));gap:8px}
+  .mbar button{all:unset;cursor:pointer;font:500 .78rem/1 var(--sans);letter-spacing:.02em;background:rgb(var(--chalk-rgb) / .9);color:var(--ink);padding:10px 14px;border-radius:999px;box-shadow:0 4px 18px -6px rgb(var(--shade-rgb) / .35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .mbar button:focus-visible{outline:2px solid var(--rubric)}
+}
+dialog.sheet{border:0;padding:0;margin:0;width:100%;max-width:100%;height:100%;max-height:100%;background:var(--paper);color:var(--ink)}
+dialog.sheet::backdrop{background:rgb(var(--shade-rgb) / .4)}
+.sheet-in{padding-block:calc(22px + env(safe-area-inset-top,0px)) calc(30px + env(safe-area-inset-bottom,0px));padding-left:max(22px,env(safe-area-inset-left,0px));padding-right:max(22px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:26px;min-height:100%}
+.sheet-in .ix-list a{opacity:.85;font-size:1.6rem;padding:4px 0}
+.sheet-close{all:unset;cursor:pointer;align-self:flex-end;font:500 .8rem/1 var(--sans);border:1px solid var(--rule);padding:10px 14px;border-radius:999px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;background:var(--night);color:var(--chalk)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 46%;transform-origin:50% 60%}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgb(var(--shade-rgb) / .05),rgb(var(--shade-rgb) / .45) 70%),linear-gradient(180deg,rgb(var(--shade-rgb) / .25),rgb(var(--shade-rgb) / 0) 30%,rgb(var(--shade-rgb) / .35))}
+.frame{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:min(300px,82vw);border:1px solid rgb(var(--chalk-rgb) / .75);padding:22px 20px 18px;background:rgb(var(--shade-rgb) / .18);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.frame h1{margin:0;font:500 2.05rem/.95 var(--sans);letter-spacing:-.02em}
+.frame h1 em{font:italic 400 2.2rem/0 var(--serif);letter-spacing:0}
+.frame .sub{margin:44px 0 10px;font:400 1.02rem/1.25 var(--serif)}
+.frame ol{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.frame ol a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;font:500 1rem/1.14 var(--sans);letter-spacing:-.01em}
+.frame ol a span{font:400 .66rem/1.6 var(--serif);opacity:.8}
+.frame ol a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.hero-cap{position:absolute;z-index:2;left:var(--gut);bottom:calc(74px + env(safe-area-inset-bottom,0px));font:400 .68rem/1.4 var(--mono);color:rgb(var(--chalk-rgb) / .8);max-width:46ch}
+.hero-cap a{color:inherit}
+.cue{position:absolute;z-index:2;right:var(--gut-r);bottom:calc(74px + env(safe-area-inset-bottom,0px));font:var(--label);letter-spacing:.06em;text-transform:uppercase;color:rgb(var(--chalk-rgb) / .85);text-decoration:none}
+
+/* ---------- chapter openers ---------- */
+.opener{position:relative;height:min(94svh,980px);min-height:520px;overflow:hidden;background:var(--night);color:var(--chalk);isolation:isolate}
+.opener>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.opener::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(var(--shade-rgb) / .42),rgb(var(--shade-rgb) / .08) 34%,rgb(var(--shade-rgb) / .12) 60%,rgb(var(--shade-rgb) / .55))}
+.op-title{margin:0;position:absolute;left:0;right:0;top:-.11em;text-align:center;font:500 clamp(4.6rem,15.5vw,15rem)/.86 var(--sans);letter-spacing:-.045em;white-space:nowrap;color:var(--chalk);text-shadow:0 2px 40px rgb(var(--shade-rgb) / .25)}
+.op-line{position:absolute;left:var(--gut);right:var(--gut-r);bottom:max(17%,120px);margin:0 auto;max-width:860px;font:400 clamp(1.55rem,3.3vw,2.7rem)/1.12 var(--serif);letter-spacing:-.01em;text-wrap:balance;text-shadow:0 2px 24px rgb(var(--shade-rgb) / .45)}
+.op-line .cap,.fh .cap{font:400 1.8em/0 var(--script);letter-spacing:0;margin-right:.03em;position:relative;top:.12em}
+.fh .cap{color:var(--rubric)}
+.op-num{position:absolute;right:var(--gut-r);bottom:78px;font:400 .82rem/1 var(--serif);letter-spacing:.08em;opacity:.85}
+.op-num b{font:var(--label);letter-spacing:.06em;text-transform:uppercase;margin-right:10px;opacity:.85}
+.op-cred{position:absolute;left:var(--gut);bottom:78px;font:400 .64rem/1.3 var(--mono);opacity:.7;max-width:40ch}
+
+/* ---------- torn paper ---------- */
+.paper{position:relative;background:var(--paper);padding-block:clamp(58px,8vw,110px) 70px;padding-left:var(--gut);padding-right:var(--gut-r);z-index:1}
+.paper::before,.paper::after{content:"";position:absolute;left:0;right:0;pointer-events:none;
+  -webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.paper::before{top:-52px;height:54px;background:var(--paper);z-index:2;-webkit-mask-image:var(--tear);mask-image:var(--tear)}
+.paper::after{top:-58px;height:60px;background:var(--fiber);z-index:1;-webkit-mask-image:var(--tear2);mask-image:var(--tear2);filter:drop-shadow(0 -2px 2px rgb(var(--shade-rgb) / .18))}
+.paper.flat::before,.paper.flat::after{display:none}
+@media (min-width:1100px){.paper,.prologue{padding-left:calc(var(--ix-w) + 24px)}}
+.inner{max-width:1040px;margin:0 auto}
+
+/* ---------- feature blocks ---------- */
+.feat{max-width:860px;margin:0 0 0 clamp(0px,6vw,90px)}
+.feat>.kicker,.feat>.flabel,.feat>.fbody,.feat>.prose{max-width:680px}
+.feat+.feat{margin-top:76px}
+.fh{margin:0 0 28px;font:400 clamp(2.1rem,4.4vw,3.3rem)/1.1 var(--serif);letter-spacing:-.025em;text-wrap:balance}
+.fh .cap{font-size:2.1em}
+.flabel{margin:0 0 8px;font:600 .95rem/1.3 var(--sans);letter-spacing:-.005em}
+.fbody{margin:0 0 18px;font:400 clamp(1.3rem,2vw,1.6rem)/1.3 var(--serif);letter-spacing:-.012em}
+.prose p{margin:0 0 1em;font-size:1.12rem;line-height:1.62}
+.prose{max-width:66ch}
+.chipl{display:inline-flex;align-items:center;gap:6px;font:500 .78rem/1 var(--sans);text-decoration:none;background:var(--paper-hi);border:1px solid var(--rule);padding:8px 11px;border-radius:4px;transition:background-color .2s,border-color .2s}
+.chipl:hover{border-color:var(--ink)}
+.back{display:inline-flex;margin-top:64px;font:500 .8rem/1 var(--sans);text-decoration:none;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:4px}
+.back:hover{color:var(--ink)}
+hr.rule{border:0;border-top:1px solid var(--rule);margin:76px 0}
+.kicker{font:var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--rubric);margin:0 0 16px}
+
+/* ---------- photos, bigger ---------- */
+.lead-photo{margin:46px 0 0}
+.lead-photo button,.ph button,.zoom{all:unset;display:block;cursor:zoom-in;width:100%}
+.lead-photo img{display:block;width:100%;height:auto;border-radius:3px}
+.pcap{font:400 .82rem/1.45 var(--sans);color:var(--muted);margin-top:10px;max-width:70ch}
+.pcap b{font-weight:600;color:var(--ink-2)}
+.gallery{columns:2 320px;column-gap:28px;margin-top:46px}
+figure.ph{break-inside:avoid;margin:0 0 30px}
+figure.ph img{width:100%;height:auto;display:block;border-radius:3px;background:var(--rule)}
+figure.ph figcaption{padding-top:10px;font:400 .84rem/1.45 var(--sans);color:var(--ink-2)}
+.tag{display:block;font:var(--label);font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.credit{display:block;margin-top:5px;font:400 .66rem/1.45 var(--mono);color:var(--muted)}
+.credit a{color:inherit}
+@media (prefers-reduced-motion:no-preference){
+  figure.ph img,.print img,.lead-photo img{transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .3s}
+  figure.ph button:hover img,.lead-photo button:hover img{transform:scale(1.012)}
+}
+
+/* archive prints, slightly scattered like a collage */
+.prints{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:34px 30px;margin-top:46px;align-items:start}
+.print{margin:0;background:var(--fiber);padding:13px 13px 16px;box-shadow:0 1px 0 rgb(var(--shade-rgb) / .05),0 18px 34px -24px rgb(var(--shade-rgb) / .6);min-width:0;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.print:nth-child(3n+1){transform:rotate(-.8deg)}.print:nth-child(3n+2){transform:rotate(.6deg)}
+.print:hover{transform:none}
+.print img{width:100%;height:auto;display:block}
+.print figcaption{font:400 .86rem/1.45 var(--sans);padding-top:11px;color:var(--ink-2)}
+.print .tag{color:var(--rubric)}
+.label-line{display:flex;align-items:center;gap:12px;font:var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--rubric);margin-top:70px}
+.label-line::after{content:"";flex:1;height:1px;background:var(--rule)}
+
+/* then / now */
+.tn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:46px}
+.tn figure{margin:0;min-width:0}
+.tn .frame2{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:3px;background:var(--rule)}
+.tn img{width:100%;height:100%;object-fit:cover;display:block}
+.tn .yr{position:absolute;top:12px;left:12px;background:rgb(var(--chalk-rgb) / .92);color:var(--ink);font:var(--label);letter-spacing:.04em;padding:7px 10px 6px;border-radius:3px}
+.tn .now .yr{background:var(--ink);color:var(--fiber)}
+.tn figcaption{font:400 .84rem/1.45 var(--sans);padding-top:10px;color:var(--ink-2)}
+
+/* annotated photos */
+.annot{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:32px;margin-top:46px;align-items:start}
+.annot .pic{position:relative}
+.annot .pic img{display:block;width:100%;height:auto;border-radius:3px}
+.annot .dot{all:unset;position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:rgb(var(--chalk-rgb) / .95);color:var(--ink);font:600 .8rem/30px var(--sans);text-align:center;cursor:pointer;box-shadow:0 0 0 4px rgb(var(--chalk-rgb) / .28),0 6px 18px -6px rgb(var(--shade-rgb) / .6);transition:transform .25s,background-color .25s,color .25s}
+.annot .dot.on,.annot .dot:hover,.annot .dot:focus-visible{transform:scale(1.18);background:var(--rubric);color:var(--chalk)}
+.annot ol{list-style:none;margin:0;padding:0;counter-reset:n;display:grid;gap:4px}
+.annot li{counter-increment:n;display:grid;grid-template-columns:30px 1fr;gap:12px;padding:12px 10px;border-radius:4px;transition:background-color .25s;font:400 .98rem/1.45 var(--serif)}
+.annot li::before{content:counter(n);width:26px;height:26px;border-radius:50%;border:1px solid var(--ink-2);display:grid;place-items:center;font:600 .74rem/1 var(--sans)}
+.annot li b{display:block;font:600 .88rem/1.3 var(--sans);margin-bottom:2px}
+.annot li.on{background:var(--paper-hi)}
+.annot .anote{grid-column:1/-1;font:400 .82rem/1.45 var(--sans);color:var(--muted);margin:-18px 0 0}
+
+/* satellite maps */
+.sat{margin:46px 0 0;min-width:0}
+.sat .sf{position:relative;overflow:hidden;border-radius:3px;background:var(--night)}
+.sat img{display:block;width:100%;height:auto}
+.sat svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.sat .route{fill:none;stroke:var(--chalk);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.sat .route-shadow{fill:none;stroke:rgb(var(--shade-rgb) / .5);stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.sat .arc{fill:none;stroke:rgb(var(--chalk-rgb) / .85);stroke-width:1.6;stroke-dasharray:5 6;vector-effect:non-scaling-stroke}
+.pin{position:absolute;width:0;height:0;text-decoration:none;color:var(--ink);z-index:2}
+.pin i{position:absolute;left:-6px;top:-6px;width:12px;height:12px;border-radius:50%;background:var(--rubric);box-shadow:0 0 0 2.5px var(--chalk),0 3px 10px rgb(var(--shade-rgb) / .55);transition:transform .2s}
+.pin span{position:absolute;white-space:nowrap;font:500 .74rem/1.15 var(--sans);padding:6px 9px 5px;border-radius:4px;background:rgb(var(--chalk-rgb) / .94);box-shadow:0 8px 22px -10px rgb(var(--shade-rgb) / .7)}
+.pin span small{display:block;font:400 .64rem/1.25 var(--mono);color:var(--muted)}
+.pin.r span{left:14px;top:-14px}.pin.l span{right:14px;top:-14px}
+.pin.t span{bottom:13px;left:0;transform:translateX(-50%)}.pin.b span{top:13px;left:0;transform:translateX(-50%)}
+a.pin:hover i,a.pin:focus-visible i{transform:scale(1.35)}
+button.pin{all:unset;position:absolute;width:0;height:0;cursor:pointer;z-index:2}
+button.pin i{position:absolute;left:-6px;top:-6px;width:12px;height:12px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 2.5px var(--chalk),0 3px 8px rgb(var(--shade-rgb) / .6);transition:transform .2s}
+button.pin.first i{background:var(--rubric)}
+button.pin:hover i,button.pin:focus-visible i{transform:scale(1.35)}
+.lbl{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;color:rgb(var(--chalk-rgb) / .92);font:500 .66rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;text-shadow:0 1px 6px rgb(var(--shade-rgb) / .85)}
+.lbl.water{font:italic 300 .95rem/1 var(--serif);letter-spacing:.01em;text-transform:none;color:rgba(222,236,240,.9)}
+.sat .scale{position:absolute;left:12px;bottom:11px;font:400 .64rem/1 var(--mono);color:var(--chalk);text-shadow:0 1px 3px rgb(var(--shade-rgb) / .9)}
+.sat .scale b{display:block;width:100%;height:2px;background:var(--chalk);margin-bottom:5px;box-shadow:0 1px 3px rgb(var(--shade-rgb) / .7)}
+.sat-credit{font:400 .62rem/1.4 var(--mono);color:var(--muted);padding-top:7px;text-align:right}
+.sat-credit a{color:inherit;text-decoration:none}
+.sat figcaption{font:400 .84rem/1.45 var(--sans);color:var(--ink-2);padding-top:6px;max-width:72ch}
+.sats-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.sats-2 .sat{margin-top:46px}
+
+/* timelines, tables, details */
+.tl{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule);max-width:760px}
+.tl li{display:grid;grid-template-columns:7.2rem 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule);font:400 1.02rem/1.45 var(--serif)}
+.tl b{font:500 .82rem/1.6 var(--mono);color:var(--rubric)}
+.tbl{overflow-x:auto;margin-top:40px;border-top:1px solid var(--ink)}
+table{border-collapse:collapse;width:100%;min-width:660px;font:400 1rem/1.45 var(--serif)}
+th,td{padding:14px 14px 14px 0;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+thead th{font:var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tbody th{font:600 .86rem/1.3 var(--sans);width:15%}
+details.more{margin-top:28px;max-width:760px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+details.more+details.more{margin-top:0;border-top:0}
+details.more summary{cursor:pointer;list-style:none;padding:16px 0;display:flex;justify-content:space-between;align-items:center;font:500 .95rem/1.3 var(--sans)}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::after{content:"+";font:400 1.6rem/1 var(--serif);transition:transform .35s}
+details.more[open] summary::after{transform:rotate(45deg)}
+.more-body{padding:0 0 22px}
+.more-body p{margin:0 0 .9em;font-size:1.06rem}
+@media (prefers-reduced-motion:no-preference){details.more[open] .more-body{animation:open .45s ease both}@keyframes open{from{opacity:0;transform:translateY(-6px)}}}
+
+/* countries */
+.countries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 28px;margin-top:46px}
+.country{min-width:0}
+.country .shots{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:6px}
+.country .shots button:first-child{grid-row:span 2}
+.country .shots img{width:100%;height:100%;object-fit:cover;display:block;border-radius:2px}
+.country .shots button{aspect-ratio:auto}
+.country .shots button:first-child img{aspect-ratio:3/4}
+.country .shots button:not(:first-child) img{aspect-ratio:4/3}
+.country .shots.two{grid-template-columns:1fr 1fr}
+.country .shots.two button:first-child{grid-row:auto}
+.country .shots.two img{aspect-ratio:4/5!important}
+.country h4{margin:16px 0 6px;font:500 1.6rem/1 var(--sans);letter-spacing:-.02em;display:flex;align-items:center;gap:12px}
+.country h4 .sw{width:30px;height:18px;border-radius:2px;flex:none}
+.country p{margin:0;font:400 1.04rem/1.5 var(--serif)}
+.sw-blister{background-color:#a9302a;background-image:radial-gradient(circle at center,rgba(255,255,255,.38) 0 3px,transparent 4px);background-size:10px 10px}
+.sw-bars{background-color:#b58b35;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 3px,transparent 3px 8px)}
+.sw-domes{background-color:#d9b300;background-image:radial-gradient(circle at center,rgb(var(--shade-rgb) / .25) 0 3px,transparent 4px);background-size:10px 10px}
+.sw-jp{background-color:#f2c300;background-image:repeating-linear-gradient(90deg,rgb(var(--shade-rgb) / .18) 0 3px,transparent 3px 8px)}
+
+/* prologue extras */
+.prologue{background:var(--paper);padding-block:clamp(58px,8vw,110px) 40px;padding-left:var(--gut);padding-right:var(--gut-r);position:relative;z-index:1}
+.trip{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-top:1px solid var(--rule)}
+.trip li{padding:14px 14px 14px 0;border-bottom:1px solid var(--rule);font:400 1rem/1.4 var(--serif)}
+.trip b{display:block;font:var(--label);font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.trip a{font:500 1rem/1.3 var(--sans);text-decoration:none}
+.trip a:hover{text-decoration:underline}
+.thread{margin:70px 0 0;padding:34px 0 0;border-top:1px solid var(--ink);display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:30px}
+.thread .big{font:400 clamp(4rem,9vw,7.5rem)/.8 var(--serif);letter-spacing:-.04em;color:var(--rubric)}
+.thread p{margin:0;font:400 clamp(1.2rem,1.9vw,1.45rem)/1.4 var(--serif)}
+
+/* archive link cards */
+.arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 28px;margin-top:40px;border-top:1px solid var(--rule)}
+.arch a{display:flex;flex-direction:column;gap:4px;padding:16px 0;border-bottom:1px solid var(--rule);text-decoration:none;min-width:0}
+.arch a strong{font:500 1.04rem/1.3 var(--sans);transition:color .2s}
+.arch a:hover strong{color:var(--rubric)}
+.arch a span:last-child{font:400 .95rem/1.4 var(--serif);color:var(--ink-2)}
+.sources ul{margin:0;padding-left:18px;font-size:.98rem}
+.sources li{margin-bottom:8px}
+
+footer{background:var(--night);color:rgb(var(--chalk-rgb) / .78);padding-block:60px calc(60px + env(safe-area-inset-bottom,0px));padding-left:var(--gut);padding-right:var(--gut-r);font:400 .82rem/1.6 var(--sans);position:relative;z-index:1}
+@media (min-width:1100px){footer{padding-left:calc(var(--ix-w) + 24px)}}
+footer .inner p{max-width:72ch;margin:0 0 1em}
+footer .sig{font:500 2.4rem/1 var(--sans);letter-spacing:-.03em;color:var(--chalk);margin-bottom:22px}
+footer .sig em{font:italic 400 2.6rem/0 var(--serif)}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);max-height:94vh;color:var(--chalk)}
+dialog.lb::backdrop{background:rgb(var(--shade-rgb) / .94)}
+dialog.lb img{max-width:100%;max-height:82vh;display:block;margin:0 auto}
+dialog.lb p{font:400 1.05rem/1.45 var(--serif);max-width:70ch;margin:14px auto 0;text-align:center}
+dialog.lb .lb-credit{font:400 .7rem/1.4 var(--mono);opacity:.7;margin-top:4px}
+dialog.lb .close{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));font:500 .78rem var(--sans);background:var(--chalk);color:var(--ink);border:0;padding:10px 14px;border-radius:999px;cursor:pointer}
+@media (prefers-reduced-motion:no-preference){dialog.lb[open]{animation:lbIn .35s ease both}@keyframes lbIn{from{opacity:0;transform:scale(.985)}}}
+
+/* scroll-driven motion (falls back to static) */
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .opener>img{animation:drift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+    @keyframes drift{from{transform:scale(1.14) translateY(-3%)}to{transform:scale(1) translateY(3%)}}
+    .hero>img{animation:heroz linear both;animation-timeline:scroll(root);animation-range:0 100vh}
+    @keyframes heroz{to{transform:scale(1.08)}}
+    .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+    @keyframes rise{from{opacity:.25;transform:translateY(28px)}to{opacity:1;transform:none}}
+    .op-title{animation:titleup linear both;animation-timeline:view();animation-range:entry 30% cover 60%}
+    @keyframes titleup{from{transform:translateY(18%);opacity:.4}to{transform:none;opacity:1}}
+  }
+}
+
+/* Chinese quoted from signs: one serif CJK face, with simplified text in its own glyph forms */
+:lang(zh-Hant){font-family:"Noto Serif TC","Noto Serif SC",var(--serif)}
+:lang(zh-Hans){font-family:"Noto Serif SC","Noto Serif TC",var(--serif)}
+
+span:lang(zh-Hant),span:lang(zh-Hans){white-space:nowrap}
+/* ---------- v3 additions ---------- */
+.prologue::before,.prologue::after{content:"";position:absolute;left:0;right:0;pointer-events:none;-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.prologue::before{top:-52px;height:54px;background:var(--paper);z-index:2;-webkit-mask-image:var(--tear);mask-image:var(--tear)}
+.prologue::after{top:-58px;height:60px;background:var(--fiber);z-index:1;-webkit-mask-image:var(--tear2);mask-image:var(--tear2);filter:drop-shadow(0 -2px 2px rgb(var(--shade-rgb) / .18))}
+.ix-list a .t{white-space:nowrap}
+@media (min-width:1100px){.opener::before{content:"";position:absolute;inset:0 auto 0 0;width:min(420px,40%);z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgb(var(--shade-rgb) / .42),rgb(var(--shade-rgb) / 0))}}
+.xref{margin:24px 0 0;max-width:66ch;font:400 .92rem/1.5 var(--sans);color:var(--ink-2)}
+.xref a,.prose a,.fbody a{color:var(--rubric);text-underline-offset:3px}
+.prints.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tn .frame2{display:block}
+.annot{margin-top:40px}
+.annot .pic{align-self:start}
+.gallery figure.ph.wide{column-span:all;margin-bottom:30px}
+.annot .alist{min-width:0}
+.annot .ahead{margin:0 0 12px;font:500 1.3rem/1.2 var(--sans);letter-spacing:-.015em}
+.annot .ahead .tag{color:var(--rubric);margin-bottom:6px}
+.annot .ahead small{display:block;margin-top:6px;font:400 .78rem/1.4 var(--sans);color:var(--muted);letter-spacing:0}
+.annot li{cursor:default}
+.annot li>span{min-width:0}
+.annot .anote{margin:-14px 0 0}
+.annot.portrait{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.annot .dot[aria-pressed="true"]{background:var(--rubric);color:var(--chalk)}
+@media (prefers-reduced-motion:no-preference){
+  .annot .dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1.5px solid rgb(var(--chalk-rgb) / .85);animation:ping 2.6s ease-out infinite;pointer-events:none}
+  .annot .dot:nth-of-type(2)::after{animation-delay:.4s}.annot .dot:nth-of-type(3)::after{animation-delay:.8s}.annot .dot:nth-of-type(4)::after{animation-delay:1.2s}.annot .dot:nth-of-type(5)::after{animation-delay:1.6s}.annot .dot:nth-of-type(6)::after{animation-delay:2s}
+  .annot .dot.on::after{animation:none;opacity:0}
+  @keyframes ping{0%{transform:scale(.9);opacity:.9}70%,100%{transform:scale(1.55);opacity:0}}
+}
+.annot + .annot{margin-top:64px}
+.country .body{padding-top:2px}
+.country .credit{margin-top:8px}
+@media (max-width:820px){.annot.portrait{grid-template-columns:1fr}.annot.portrait .pic{max-width:560px}}
+@media (max-width:560px){
+  .prints.two{grid-template-columns:1fr}
+  .hero-cap{max-width:calc(100% - 120px)}
+  .annot .dot{width:26px;height:26px;margin:-13px 0 0 -13px;line-height:26px;font-size:.74rem}
+  .op-cred{max-width:calc(100% - 150px)}
+}
+
+@media (min-width:1100px){
+  .prologue{padding-left:calc(var(--ix-w) + 24px)}
+  .op-title{left:calc(var(--ix-w) + 4px);right:4px}
+  .op-line{left:calc(var(--ix-w) + 24px);right:40px}
+  .op-cred{left:calc(var(--ix-w) + 24px)}
+  .annot:not(.portrait) .pic{position:sticky;top:28px}
+}
+.inner>*:not(.feat):not(hr)+.feat{margin-top:104px}
+.index .ix-title,.index .ix-list,.index .ix-foot{transition:color .45s ease}
+.index .on-dark{color:var(--chalk)}
+body.at-end .index{opacity:0;pointer-events:none}
+
+/* field guide */
+.guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:46px 28px;margin-top:46px}
+.gcard{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.gcard .gimg{display:block;width:100%;aspect-ratio:4/5;max-width:100%;overflow:hidden;border-radius:3px;background:var(--rule)}
+.gcard .gimg img{width:100%;height:100%;object-fit:cover;display:block}
+.gcard .tag{margin-top:14px}
+.gcard h4{margin:2px 0 12px;font:500 1.5rem/1.1 var(--sans);letter-spacing:-.02em;text-wrap:balance}
+.gcard .gl{margin:0 0 6px;font:var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.gcard ul{margin:0;padding:0;list-style:none;display:grid;gap:5px;font:400 1rem/1.4 var(--serif)}
+.gcard li{position:relative;padding-left:16px}
+.gcard li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:1px;background:var(--ink-2)}
+.gcard .uniq{margin:16px 0 0;padding-top:12px;border-top:1px solid var(--rule);font:400 1rem/1.45 var(--serif)}
+.gcard .uniq b{display:block;font:var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--rubric);margin-bottom:4px}
+.gcard .go{margin-top:14px;font:500 .82rem/1 var(--sans);color:var(--rubric);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+.gcard .go:hover{color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){.gcard .gimg img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}.gcard .gimg:hover img{transform:scale(1.035)}}
+@media (max-width:900px){.guide{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.guide{grid-template-columns:1fr;gap:40px}.gcard .gimg{aspect-ratio:4/3}}
+
+@media (max-width:820px){
+  .annot{grid-template-columns:1fr}
+  .sats-2{grid-template-columns:1fr}
+  .thread{grid-template-columns:1fr}
+  .countries{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .tn{grid-template-columns:1fr}
+  .gallery{columns:1}
+  .tl li{grid-template-columns:5.6rem 1fr}
+  .pin.minor span{display:none}
+  .pin span{font-size:.66rem;padding:5px 7px 4px}
+  .op-line{bottom:12%}
+  .feat{margin-left:0}
+  .print:nth-child(n){transform:none}
+}
+</style>
+</head>
+<body>
+<nav class="index" id="index" aria-label="Chapters">
+  <a class="ix-title" href="#top">Street<br>Gr<em>a</em>mmar<small>A notebook · 2026</small></a>
+  <ol class="ix-list" id="ix-list"></ol>
+  <div class="ix-foot">© 2026 Eric Zhang<br><a href="#credits">Credits &amp; sources</a></div>
+</nav>
+<div class="mbar"><button type="button" id="open-index" aria-haspopup="dialog">Index</button></div>
+<dialog class="sheet" id="sheet" aria-label="Chapters">
+  <div class="sheet-in">
+    <button class="sheet-close" type="button" id="close-index">Close</button>
+    <a class="ix-title" href="#top">Street<br>Gr<em>a</em>mmar<small>A notebook · 2026</small></a>
+    <ol class="ix-list" id="ix-list-m"></ol>
+  </div>
+</dialog>
+
+<header class="hero" id="top">
+  <img src="web/caillebotte.jpg" width="2000" height="1553" alt="Gustave Caillebotte's painting Paris Street; Rainy Day: Parisians with umbrellas crossing a wide, wet cobbled junction lined with new apartment buildings.">
+  <div class="frame">
+    <h1>Street<br>Gr<em>a</em>mmar</h1>
+    <p class="sub">Small details from the streets of Wales, London, New York and Boston.</p>
+    <ol id="frame-list"></ol>
+  </div>
+  <p class="hero-cap">Gustave Caillebotte, <i>Paris Street; Rainy Day</i>, 1877. Art Institute of Chicago, public domain. The dérive was invented in this city eighty years later.</p>
+  <a class="cue" href="#prologue">Scroll ↓</a>
+</header>
+
+<main>
+<!-- ============ PROLOGUE ============ -->
+<section class="prologue" id="prologue" data-chapter="prologue">
+  <div class="inner">
+    <div class="feat rv">
+      <p class="kicker">Prologue</p>
+      <h2 class="fh"><span class="cap">E</span>very street follows small rules</h2>
+      <p class="fbody">The bumps under your feet at a crossing, the armrest in the middle of a bench, the language on a street sign. Nobody reads them on purpose, but they shape how you move and who feels welcome.</p>
+      <div class="prose"><p>These photographs come from slow walks through Wales, London, New York and Boston. Old photographs, maps and satellite views show how each street came to look the way it does. Psychogeography is the habit of noticing all this: how the shape of a place changes the way you feel in it.</p></div>
+    </div>
+
+    <div class="feat rv" id="where">
+      <h3 class="fh"><span class="cap">W</span>here in the world</h3>
+      <p class="flabel">Two countries, eight places</p>
+      <p class="fbody">Most of these walks happened in one week in March 2026, along the south coast of Wales. London, New York and Boston came from other trips. Every map here is a satellite view; tap a pin to jump to that chapter.</p>
+    </div>
+    <figure class="sat rv" data-sat="world"><figcaption>The North Atlantic from orbit. Dashed lines are the great-circle routes from London to New York (about 5,600 km) and Boston (about 5,250 km). Okayama in Japan is where tactile paving was invented.</figcaption></figure>
+    <div class="sats-2">
+      <figure class="sat rv" data-sat="uk" id="where-uk"><figcaption>South Wales and southern England. London is about 210 km east of Cardiff.</figcaption></figure>
+      <figure class="sat rv" data-sat="us" id="where-us"><figcaption>The north-eastern United States. The two Chinatowns are about 300 km apart.</figcaption></figure>
+    </div>
+    <figure class="sat rv" data-sat="vale" id="where-vale"><figcaption>Project week, 23–26 March 2026: one town a day along the coast of the Vale of Glamorgan, ending in Cardiff.</figcaption></figure>
+    <ul class="trip">
+      <li><b>23 Mar 2026 · 51.41°N 3.49°W</b><a href="#walk">Llantwit Major</a> · a dérive from the station</li>
+      <li><b>24 Mar 2026 · 51.46°N 3.45°W</b><a href="#messages">Cowbridge</a> · the graffiti walk</li>
+      <li><b>25 Mar 2026 · 51.39°N 3.27°W</b><a href="#edges">Barry Island &amp; Penarth</a> · the coast</li>
+      <li><b>26 Mar 2026 · 51.48°N 3.18°W</b><a href="#landmarks">Cardiff</a> · arcades and the bay</li>
+      <li><b>Date not recorded · 51.51°N 0.13°W</b><a href="#theatres">London</a> · Chinatown and Theatreland</li>
+      <li><b>Date not recorded · 40.72°N 74.00°W</b><a href="#chinatowns">New York</a> · Mott Street</li>
+      <li><b>15 Jun 2026 · 42.35°N 71.06°W</b><a href="#chinatowns">Boston</a> · the Chinatown gate</li>
+    </ul>
+
+    <div class="thread rv">
+      <div class="big">1940</div>
+      <p>One year keeps coming up. In September 1940 a German bomb blew the front off the Queen's Theatre on Shaftesbury Avenue, which is why Les Misérables now plays behind a modern glass corner. Wartime bombing also wrecked Limehouse, London's first Chinatown, and its people moved to Soho. That August a bomb damaged the chantry priest's house at St Illtud's in Llantwit Major. The war shaped streets from Wales to the West End.</p>
+    </div>
+
+    <div class="feat rv" id="walk" style="margin-top:90px">
+      <h3 class="fh"><span class="cap">A</span> dérive through Llantwit Major</h3>
+      <p class="flabel">23 March 2026 · one hour on foot</p>
+      <p class="fbody">A dérive is a walk with no destination: you follow whatever pulls at you and see where the town takes you. The Situationists invented it in 1950s Paris to notice how a city's layout steers people's moods.</p>
+      <div class="prose"><p>I walked out from the station and photographed whatever stopped me. Each dot is a photo, placed by my phone's GPS and joined in the order I took them. Tap a dot to see it.</p></div>
+    </div>
+    <figure class="sat rv" data-sat="llantwit"><figcaption>The route over Llantwit Major. Each pixel of open satellite imagery covers about 10 metres, so streets look soft; the dots are exact.</figcaption></figure>
+    <div class="label-line">From the archive</div>
+    <div class="prints" data-arch="wal_llantwit1975"></div>
+  </div>
+</section>
+
+<!-- ============ I UNDERFOOT ============ -->
+<section class="chapter" id="underfoot" data-chapter="underfoot">
+  <header class="opener">
+    <img src="op/DSC_0738.jpg" width="1800" height="1200" alt="A buff ribbed tactile strip running along a pedestrian street in Cardiff, with a steel bollard planted in it." loading="lazy" style="object-position:30% 50%">
+    <h2 class="op-title">Underfoot</h2>
+    <p class="op-line"><span class="cap">T</span>he ground talks to people who can't see it.</p>
+    <span class="op-cred">Cardiff city centre</span>
+    <span class="op-num"><b>Chapter</b>I</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">A</span> language for feet</h3>
+      <p class="flabel">Tactile paving</p>
+      <p class="fbody">Seiichi Miyake invented tactile paving in Japan in 1965, inspired by braille. The first blocks went down on a street in Okayama in 1967. The UK, the US and Australia adopted their own versions in the early 1990s, and each country wrote its own grammar.</p>
+      <div class="prose"><p>Britain's is the most detailed. Round blisters mean “a crossing is here”, red where traffic is controlled (as at a zebra) and buff where it isn't. Bars across your path (“corduroy”) warn of steps or a hazard. Bars running along your path are a guidance route, used where there's no kerb or wall to follow, as in a pedestrianised shopping street.</p>
+      <p>So the red pad at the Llantwit Major zebra and the buff strip down Cardiff's shopping street are two different words in the same language. The Cardiff strip also shows a rule being broken: a steel bollard stands right in the middle of the route it's meant to keep clear.</p></div>
+    </div>
+    <div class="gallery" data-ids="IMG_1112,DSC_0740,DSC_0739,IMG_1123"></div>
+
+    <div class="feat rv" id="tactile-world">
+      <h3 class="fh"><span class="cap">F</span>our countries, four grammars</h3>
+      <p class="flabel">UK · United States · Japan · China</p>
+      <p class="fbody">The same idea took a different shape in each country, depending on who wrote the rules and how fast the paving went down.</p>
+    </div>
+    <div class="countries" id="countries"></div>
+    <details class="more">
+      <summary>Why are they so different?</summary>
+      <div class="more-body">
+        <p><strong>Who writes the rules.</strong> Britain's Department for Transport publishes detailed national guidance, so every shape and colour has one meaning everywhere. In the US, the Americans with Disabilities Act of 1990 made one symbol, the “detectable warning”, compulsory at kerb ramps and platform edges, and left guidance routes to local choice. Japan's rules were standardised in 2001, and since 1994 large buildings have had to install the blocks.</p>
+        <p><strong>How fast it was built.</strong> Japan added tactile paving gradually over decades. China adopted the same yellow two-shape system and built at enormous speed: since 2001 major streets have been required to have “blind lanes”, and Beijing alone laid more than 1,600 km. Building fast without consulting blind users led to lanes that run into trees, holes, poles and parked bikes. In 2023 China passed a national law on barrier-free environments, which covers keeping facilities such as blind lanes clear.</p>
+        <p><strong>What the street is for.</strong> In car-centred American towns the danger point is the kerb, so the domes cluster there. In Japanese and Chinese cities, where huge numbers of people walk to stations, long guidance routes lead from the street right onto the platform.</p>
+      </div>
+    </details>
+    <details class="more">
+      <summary>Above the paving: Belisha beacons and Welsh signs</summary>
+      <div class="more-body">
+        <p>The black-and-white pole at the Llantwit Major crossing is a Belisha beacon, named after Leslie Hore-Belisha, the Minister of Transport who added the amber globes to crossings in 1934. The stripes painted on the road came later and gave the zebra crossing its name.</p>
+        <p>Up the road, the footpath disc says Public Footpath and Llwybr Cyhoeddus. Bilingual signs in Wales were won by Cymdeithas yr Iaith Gymraeg, the Welsh Language Society, which campaigned against English-only road signs from the late 1960s, often by painting over them.</p>
+      </div>
+    </details>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ II CITY PLANS ============ -->
+<section class="chapter" id="grids" data-chapter="grids">
+  <header class="opener">
+    <img src="sat/iowa.jpg" width="1200" height="728" alt="Satellite view of central Iowa: dark fields divided by straight roads into a grid of one-mile squares." loading="lazy">
+    <h2 class="op-title">City plans</h2>
+    <p class="op-line"><span class="cap">A</span> country drawn with a ruler, and an island drawn with one too.</p>
+    <span class="op-cred">Central Iowa from orbit · EOxCloudless 2024</span>
+    <span class="op-num"><b>Chapter</b>II</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">G</span>rid versus growth</h3>
+      <p class="flabel">Why American streets look so different</p>
+      <p class="fbody">Walk in Wales and the lanes bend around old field edges, churches and streams. Walk in most American towns and you turn at right angles every block. The difference is easiest to see from space.</p>
+    </div>
+    <div class="sats-2">
+      <figure class="sat rv" data-sat="iowa"><figcaption><b>Central Iowa.</b> Roads every mile, laid out by a federal survey before most of the farms existed.</figcaption></figure>
+      <figure class="sat rv" data-sat="valefields"><figcaption><b>Vale of Glamorgan.</b> Same width, about 25 km. Fields and lanes grew piece by piece over many centuries.</figcaption></figure>
+    </div>
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">S</span>old by the square mile</h3>
+      <p class="flabel">The Land Ordinance of 1785</p>
+      <p class="fbody">After independence, the United States had a huge territory to sell. It was surveyed into townships six miles square, each split into 36 one-mile sections, and roads followed the section lines.</p>
+      <div class="prose"><p>In most states west of Pennsylvania you can drive a mile, turn ninety degrees and drive another mile. The farms of the Vale of Glamorgan were never surveyed that way; their hedges follow ownership, streams and old tracks.</p></div>
+    </div>
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">A</span>n island laid flat</h3>
+      <p class="flabel">The Commissioners' Plan of 1811</p>
+      <p class="fbody">New York's commissioners laid 12 avenues and 155 numbered streets over Manhattan, about 2,000 blocks, tilted 29 degrees to fit the island.</p>
+      <div class="prose"><p>They argued that straight streets and square houses were the cheapest to build and the most convenient to live in, and equal lots were easy to sell. From space you can still see where the grid begins and the older, tangled streets of lower Manhattan, including Chinatown, end.</p></div>
+    </div>
+    <div class="sats-2">
+      <figure class="sat rv" data-sat="manhattan"><figcaption><b>Manhattan.</b> The 1811 grid fills the island north of Houston Street. Chinatown sits in the older, irregular streets to the south.</figcaption></figure>
+      <div class="prints" style="grid-template-columns:1fr" data-web="grid1821,levittown"></div>
+    </div>
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">T</span>hen came the car</h3>
+      <p class="flabel">Zoning, suburbs and the Interstate</p>
+      <p class="fbody">A 1926 Supreme Court case, Village of Euclid v. Ambler Realty, made zoning legal, and American towns began separating homes, shops and factories, so most errands needed a drive.</p>
+      <div class="prose"><p>After the Second World War, suburbs like Levittown filled with curving streets of near-identical houses. The Federal-Aid Highway Act of 1956 funded 41,000 miles of Interstate, and some of it was driven straight through city neighbourhoods. Boston's Chinatown was squeezed between the elevated Central Artery and the Massachusetts Turnpike.</p>
+      <p>Britain went another way. Most British towns were built before cars, around medieval lanes and market streets like Llantwit Major's. After the war, the Town and Country Planning Act 1947 meant you needed planning permission to build almost anything, and it started the system of protecting historic buildings. Old street patterns survived because the law made them hard to change.</p></div>
+    </div>
+    <div class="sats-2">
+      <figure class="sat rv" data-sat="boston"><figcaption><b>Boston.</b> Chinatown is pressed between downtown, the rail yards of South Station and the Massachusetts Turnpike along its southern edge.</figcaption></figure>
+      <div class="prints" style="grid-template-columns:1fr" data-web="artery"></div>
+    </div>
+    <details class="more">
+      <summary>Timeline: how the American street was made</summary>
+      <div class="more-body">
+        <ol class="tl">
+          <li><b>1785</b>Land Ordinance: the West is surveyed into six-mile townships and one-mile sections.</li>
+          <li><b>1811</b>The Commissioners' Plan lays the grid over Manhattan. It takes about 60 years to reach 155th Street.</li>
+          <li><b>1926</b>Village of Euclid v. Ambler Realty: the Supreme Court upholds zoning.</li>
+          <li><b>1947</b>Levittown, New York, begins: mass-produced houses for returning soldiers. In Britain, the Town and Country Planning Act is passed the same year.</li>
+          <li><b>1950s</b>Boston's elevated Central Artery is built through downtown, beside Chinatown. It was later replaced by a tunnel in the Big Dig, finished in 2007.</li>
+          <li><b>1956</b>The Federal-Aid Highway Act funds the 41,000-mile Interstate system.</li>
+        </ol>
+      </div>
+    </details>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ III BUILT FOR WHOM ============ -->
+<section class="chapter" id="built-for" data-chapter="built-for">
+  <header class="opener">
+    <img src="op/DSC_0747.jpg" width="1800" height="1200" alt="A row of slatted bench seats divided by curved steel armrests on a Cardiff street." loading="lazy">
+    <h2 class="op-title">Built for whom</h2>
+    <p class="op-line"><span class="cap">Y</span>ou may sit. You may not stay.</p>
+    <span class="op-cred">Cardiff city centre</span>
+    <span class="op-num"><b>Chapter</b>III</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">D</span>efensive design</h3>
+      <p class="flabel">Benches, studs and perch seats</p>
+      <p class="fbody">Some street furniture is designed to stop people as much as to help them. Planners call it defensive design. Critics call it hostile architecture.</p>
+      <div class="prose"><p>Armrests divide a bench so no one can lie down. A steel stud on a planter edge stops skateboards from grinding. Perch seats at a bus stop are tipped forward so you lean instead of resting. Each one is a small decision about who the street is for, and how long they're allowed to stay.</p></div>
+    </div>
+    <div class="gallery" data-ids="DSC_0737,IMG_8778,DSC_0748,IMG_8719,DSC_0749"></div>
+    <details class="more">
+      <summary>A short history of hostile design</summary>
+      <div class="more-body">
+        <ol class="tl">
+          <li><b>1800s</b>Victorian cities fit angled “urine deflectors” into dark corners and doorways.</li>
+          <li><b>2012</b>Camden council in London installs the Camden bench, a lumpy concrete block designed to resist sleeping, skateboarding, graffiti and even drug dealing.</li>
+          <li><b>2014</b>Photos of metal spikes outside a London block of flats go viral. After protests, the spikes are taken out.</li>
+          <li><b>2016</b>In Liverpool, a sloped steel cover is put over steps at a former Bank of England building to stop people sleeping there.</li>
+        </ol>
+        <p style="margin-top:16px">Supporters say these designs keep public space orderly. Critics say they push away homeless people and make streets less welcoming for everyone. A 2020 review noted there was still no large study of how they affect homeless people's wellbeing.</p>
+      </div>
+    </details>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ IV CHINATOWNS ============ -->
+<section class="chapter" id="chinatowns" data-chapter="chinatowns">
+  <header class="opener">
+    <img src="op/DSC_0761.jpg" width="1620" height="1080" alt="A lion's head hung among strings of red lanterns at a street corner in London's Chinatown." loading="lazy">
+    <h2 class="op-title">Chinatowns</h2>
+    <p class="op-line"><span class="cap">T</span>hree Chinatowns, three ways in.</p>
+    <span class="op-cred">Chinatown, London</span>
+    <span class="op-num"><b>Chapter</b>IV</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">O</span>ne name, three places</h3>
+      <p class="flabel">New York · London · Boston</p>
+      <p class="fbody">“Chinatown” sounds like one kind of place, but each one shows who arrived, when, and who the street now serves.</p>
+      <div class="prose"><p>In London you enter through a gate under a ceiling of red lanterns, and the council's own street signs are in Chinese. In Manhattan there's no gate: tenement fire escapes, a neon welcome sign and political flags do the talking. Boston has a classic gate, and the flags hanging under it say as much as the inscription above.</p></div>
+    </div>
+    <div class="tbl rv">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col">New York (Manhattan)</th><th scope="col">London (Gerrard St)</th><th scope="col">Boston</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Way in</th><td>No gate. A neon “Welcome” sign strung across the street.</td><td>Ornamental gates, and red lanterns hung over the whole street.</td><td>A traditional gate inscribed <span lang="zh-Hant">天下為公</span>, “all under heaven is for the people”.</td></tr>
+          <tr><th scope="row">Official signs</th><td>Chinese mostly on shop signs, organisation boards and banners.</td><td>City of Westminster street signs in English and Chinese, signed <span lang="zh-Hant">西敏市</span>.</td><td>Chinese on shop signs along the street through the gate.</td></tr>
+          <tr><th scope="row">Flags</th><td>US and ROC flags outside the Kuomintang's eastern US office and the CCBA.</td><td>None seen. Lanterns and gates carry the identity.</td><td>US and ROC flags hanging under the gate.</td></tr>
+          <tr><th scope="row">Shaped by</th><td>Exclusion-era bachelor society, Nationalist politics.</td><td>Wartime bombing of Limehouse, cheap Soho rents, Hong Kong migration, West End diners.</td><td>Highway building, and a gate from Taiwan.</td></tr>
+          <tr><th scope="row">Feels built for</th><td>People who live and work there.</td><td>Visitors and diners, at theatre-district scale.</td><td>A mix: a landmark gate with a working street behind it.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">M</span>ott Street, New York</h3>
+      <p class="flabel">Since 1858</p>
+      <p class="fbody">Chinatown grew up here as a “bachelor society”: the Chinese Exclusion Act of 1882 stopped most immigration, so men couldn't bring their families for decades.</p>
+    </div>
+    <div class="gallery" data-ids="DSC_0551,DSC_0554"></div>
+    <div class="tn rv" data-pair="nyc_mott|DSC_0549|Early 1900s|Now"></div>
+    <p class="xref">The fire escapes and the two scripts on Mott Street's signs are read up close in <a href="#fire-escapes">chapter VI</a>.</p>
+    <details class="more">
+      <summary>Timeline: Manhattan's Chinatown</summary>
+      <div class="more-body">
+        <ol class="tl">
+          <li><b>1858</b>Ah Ken, often named as the first Chinese person to settle permanently in the area, arrives.</li>
+          <li><b>1872</b>Wo Kee opens a general store on Mott Street. Most early migrants are men from Taishan in Guangdong.</li>
+          <li><b>1882</b>The Chinese Exclusion Act stops most Chinese immigration.</li>
+          <li><b>1883</b>The Chinese Consolidated Benevolent Association (CCBA) is founded. It acts almost like a local government.</li>
+          <li><b>1899–1911</b>Kang Youwei's Chinese Empire Reform Association, which wants an emperor under a constitution, runs its New York base on Mott Street. Sun Yat-sen's revolutionaries compete for the same people's money and loyalty.</li>
+          <li><b>1930s–70s</b>Kuomintang (Nationalist) loyalists take over community organisations and hold the CCBA chair from 1948 into the 1970s.</li>
+          <li><b>1962</b>The CCBA opens its “China Tower” at 62 Mott Street, which still flies the ROC flag beside the Stars and Stripes.</li>
+          <li><b>1960s on</b>New migrants from Hong Kong and Taiwan arrive, and Cantonese becomes the main language.</li>
+        </ol>
+      </div>
+    </details>
+    <div class="label-line">From the archive</div>
+    <div class="prints" data-arch="nyc_reform,nyc_newyear1909,nyc_ct1,nyc_street"></div>
+
+    <div class="feat rv" style="margin-top:90px">
+      <h3 class="fh"><span class="cap">G</span>errard Street, London</h3>
+      <p class="flabel">A Chinatown that moved</p>
+      <p class="fbody">London's first Chinatown was in Limehouse, by the docks. After wartime bombing, it moved about 7 km west to the cheap, run-down streets behind the theatres of Soho.</p>
+    </div>
+    <figure class="sat rv" data-sat="london"><figcaption>From the docks at Limehouse to the theatre district in Soho.</figcaption></figure>
+    <div class="tn rv" data-pair="lon_limehouse1936|DSC_0762|1936 · Limehouse|Now · Gerrard Street"></div>
+    <div class="gallery" data-ids="DSC_0767,DSC_0768"></div>
+    <details class="more">
+      <summary>Timeline: London's Chinatown</summary>
+      <div class="more-body">
+        <ol class="tl">
+          <li><b>1677–85</b>Gerrard Street is built on the Earl of Macclesfield's military training ground. Later residents include John Dryden.</li>
+          <li><b>1880s–1930s</b>London's first Chinatown grows in Limehouse in the East End, serving sailors at the docks.</li>
+          <li><b>1898–99</b>Charles Booth's poverty map colours Gerrard Street as “fairly comfortable” to “mixed”. No Chinese businesses yet.</li>
+          <li><b>1940–45</b>Wartime bombing devastates Limehouse.</li>
+          <li><b>1950s</b>The first Chinese restaurants open on Lisle Street, where rents are cheap and West End diners are close by.</li>
+          <li><b>1960s–70s</b>Migrants from rural Hong Kong arrive. Gerrard Street becomes the centre of Chinese London.</li>
+          <li><b>1980s</b>The London Chinatown Community Centre opens in 1980, a Chinese-style pavilion goes up in Newport Place, and the first two gates are finished in 1986.</li>
+          <li><b>2016</b>A third gate, in the Qing dynasty style, is made by craftspeople in China, assembled in London and unveiled on Wardour Street by the Duke of York and China's ambassador.</li>
+        </ol>
+      </div>
+    </details>
+    <div class="label-line">From the archive</div>
+    <div class="prints" data-arch="map_booth_soho,lon_v2_1945"></div>
+
+    <div class="feat rv" style="margin-top:90px">
+      <h3 class="fh"><span class="cap">B</span>each Street, Boston</h3>
+      <p class="flabel">A gate from Taiwan</p>
+      <p class="fbody">Boston's Chinese community began with workers brought east to break a strike in 1870. A century later, highways cut through the neighbourhood, and in 1982 Taiwan's government offered the city a gate.</p>
+      <div class="prose"><p>The gate stands at the corner of Beach Street and Surface Road, on a site that once held a ventilation building for the Central Artery tunnel; during the Big Dig it became a garden. Its inscription, flags and lions are read up close in <a href="#gates">chapter VI</a>.</p></div>
+    </div>
+    <details class="more">
+      <summary>Timeline: Boston's Chinatown</summary>
+      <div class="more-body">
+        <ol class="tl">
+          <li><b>1870</b>Chinese workers are brought from San Francisco to break a shoe-factory strike in North Adams, Massachusetts. Many later move to Boston.</li>
+          <li><b>1875</b>Hong Far Low, the first restaurant, opens.</li>
+          <li><b>1903</b>A police raid arrests 234 people in Chinatown, and 45 are later deported.</li>
+          <li><b>1950s–60s</b>The Central Artery and the Massachusetts Turnpike take homes, the library and business land.</li>
+          <li><b>1982</b>Taiwan's government offers the city the gate at Beach Street.</li>
+        </ol>
+      </div>
+    </details>
+    <div class="label-line">From the archive</div>
+    <div class="prints" data-arch="bos_beach1868"></div>
+
+    <div class="feat rv" id="flags" style="margin-top:90px">
+      <h3 class="fh"><span class="cap">W</span>hy the flag flies in America</h3>
+      <p class="flabel">And not in London</p>
+      <p class="fbody">The blue-and-red flag in the New York and Boston photos is the flag of the Republic of China, now based in Taiwan.</p>
+      <div class="prose"><p>In 1911 overseas Chinese communities in America backed the revolution that founded the Republic, and many of their associations have flown its flag ever since. During the Second World War the US fought alongside the Nationalists, and Chinese American veterans came home loyal to them. After the Communists won the civil war in 1949, Nationalist supporters ran key associations such as New York's CCBA, and the US kept recognising the ROC as “China” until 1979. Many older families also had bitter memories of the Communist Party, so the flags stayed up after Washington's switch. Boston's gate says the same thing in stone.</p>
+      <p>London's story runs the other way. Britain recognised the People's Republic on 6 January 1950, partly to protect Hong Kong, then a British colony. Most of the people who built Gerrard Street came from Hong Kong, not as political exiles, so their Chinatown is decorated with lanterns, lions and council street signs rather than party flags. The official presence there is Beijing's and Hong Kong's: China's ambassador helped unveil the newest gate in 2016, and the festival banner on the Gerrard Street gate in <a href="#gates">chapter VI</a> carries the logos of China's tourist office in London and Hong Kong's trade office.</p></div>
+    </div>
+    <div class="feat rv" id="culture">
+      <h3 class="fh"><span class="cap">T</span>he same calendar everywhere</h3>
+      <p class="flabel">Lunar New Year</p>
+      <p class="fbody">At Lunar New Year, lion dancers move from shop to shop to bring good luck, drums and cymbals clear the street, and red envelopes of “lucky money” change hands.</p>
+      <div class="prose"><p>The red lanterns strung over Gerrard Street are New Year decorations that have become part of the street itself. In New York, photographers were recording the same celebrations on Mott Street more than a century ago.</p></div>
+    </div>
+    <div class="prints" data-web="ldn_dragon"></div>
+    <div class="feat rv" style="margin-top:90px">
+      <h3 class="fh"><span class="cap">W</span>ales has a Chinese story too</h3>
+      <p class="flabel">Tiger Bay, 1911</p>
+      <p class="fbody">Cardiff's docklands, later called Tiger Bay, were home to sailors from all over the world, including Chinese seamen.</p>
+      <div class="prose"><p>During the national seamen's strike in the summer of 1911, shipowners hired Chinese sailors to keep the port running. They were attacked in the street, and the violence spread to the homes and businesses of Chinese people living in Cardiff.</p></div>
+    </div>
+    <div class="prints" data-arch="wal_butest1905"></div>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ V THEATRELAND ============ -->
+<section class="chapter" id="theatres" data-chapter="theatres">
+  <header class="opener">
+    <img src="op/DSC_0757.jpg" width="1800" height="1200" alt="The Gielgud Theatre's carved Edwardian corner on Shaftesbury Avenue at dusk, with the Sondheim Theatre at the far end of the block." loading="lazy" style="object-position:33% 50%">
+    <h2 class="op-title">Theatreland</h2>
+    <p class="op-line"><span class="cap">T</span>wo twins, one bomb.</p>
+    <span class="op-cred">Shaftesbury Avenue, London · number plates blurred</span>
+    <span class="op-num"><b>Chapter</b>V</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">A</span> street cut for traffic</h3>
+      <p class="flabel">Shaftesbury Avenue, 1877–86</p>
+      <p class="fbody">The architect George Vulliamy and the engineer Joseph Bazalgette cut Shaftesbury Avenue through the crowded slums of St Giles and Soho as a new route for traffic. Its cheap, wide plots on a main road suited theatres.</p>
+      <div class="prose"><p>The Lyric, where Hadestown plays, opened in 1888 and is the oldest theatre still standing on the avenue. Chinatown's Gerrard Street runs right behind it; its first restaurants fed post-show crowds, which helps explain why London's Chinatown faces visitors more than New York's does.</p></div>
+    </div>
+    <div class="annot rv" data-annot="gielgud"></div>
+    <div class="tn rv" data-pair="lon_lyric1943|DSC_0756|1943 · the Lyric|Now · the Lyric"></div>
+    <details class="more">
+      <summary>Timeline: the twins and their street</summary>
+      <div class="more-body">
+        <ol class="tl">
+          <li><b>1877–86</b>Shaftesbury Avenue is built.</li>
+          <li><b>1888</b>The Lyric Theatre opens, designed by C. J. Phipps.</li>
+          <li><b>1906</b>The Hicks Theatre opens; it's renamed the Globe in 1909 and the Gielgud in 1994.</li>
+          <li><b>1907</b>The Queen's Theatre opens next door as its twin. Both are by W. G. R. Sprague.</li>
+          <li><b>1940</b>A German bomb destroys the Queen's façade.</li>
+          <li><b>1959</b>The Queen's reopens with a modern front.</li>
+          <li><b>2004</b>Les Misérables moves in.</li>
+          <li><b>2019</b>The Queen's is renamed the Sondheim.</li>
+        </ol>
+      </div>
+    </details>
+    <div class="prints two" data-arch="lon_shaftesbury1940" data-ids="DSC_0758"></div>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ VI ARCHES & ARCADES ============ -->
+<section class="chapter" id="landmarks" data-chapter="landmarks">
+  <header class="opener">
+    <img src="op/DSC_0746.jpg" width="1800" height="1200" alt="Inside the Castle Arcade in Cardiff: a glazed roof, hanging lanterns, white wooden oriel windows and a footbridge across the passage." loading="lazy">
+    <h2 class="op-title">Arches &amp; arcades</h2>
+    <p class="op-line"><span class="cap">S</span>ome buildings give a whole street its character.</p>
+    <span class="op-cred">Castle Arcade, Cardiff</span>
+    <span class="op-num"><b>Chapter</b>VI</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv" id="field-guide">
+      <p class="kicker">Field guide</p>
+      <h3 class="fh"><span class="cap">S</span>ix buildings with a signature</h3>
+      <p class="fbody">Each of these building types has a few features that give it away. Learn them once and you start spotting them in every city. Tap a card to read the full photo.</p>
+    </div>
+    <div class="guide">
+      <article class="gcard rv">
+        <a class="gimg" href="#read-castle"><img loading="lazy" decoding="async" src="guide/castle.jpg" width="600" height="750" alt="Detail of the Castle Arcade: a glazed roof, hanging lanterns, white oriel windows and a footbridge marked To the balcony."></a>
+        <span class="tag">Cardiff · 1858–1902</span>
+        <h4>The arcade</h4>
+        <p class="gl">How to spot one</p>
+        <ul><li>A glass roof over a public passage</li><li>Small shopfronts lining both sides</li><li>Upper floors that look into the lane</li></ul>
+        <p class="uniq"><b>Unique here</b>The Castle Arcade adds wooden galleries, oriel windows and iron footbridges. It is listed as the finest of Cardiff's seven.</p>
+        <a class="go" href="#read-castle">Read the photo →</a>
+      </article>
+      <article class="gcard rv">
+        <a class="gimg" href="#read-morgan"><img loading="lazy" decoding="async" src="guide/morgan.jpg" width="600" height="750" alt="Detail of an original wooden shopfront inside the Morgan Arcade, almost all glass."></a>
+        <span class="tag">Morgan Arcade · 1896–99</span>
+        <h4>The Victorian shopfront</h4>
+        <p class="gl">How to spot one</p>
+        <ul><li>Slender wooden frames, glass almost to the floor</li><li>A low panelled base under the window</li><li>The shop's name lettered above</li></ul>
+        <p class="uniq"><b>Unique here</b>Some original fronts survived a modern refurbishment. One belongs to Spillers Records, the oldest record shop in the world.</p>
+        <a class="go" href="#read-morgan">Read the photo →</a>
+      </article>
+      <article class="gcard rv">
+        <a class="gimg" href="#read-boston"><img loading="lazy" decoding="async" src="guide/paifang.jpg" width="720" height="900" alt="Boston's Chinatown gate: green tiled roofs, the inscription board, and US and ROC flags hanging below."></a>
+        <span class="tag">Chinatown gates · London &amp; Boston</span>
+        <h4>The Chinatown arch</h4>
+        <p class="gl">How to spot one</p>
+        <ul><li>Posts under tiered, tiled roofs with upturned eaves</li><li>An inscription board, read right to left</li><li>Stone guardian lions at its feet</li></ul>
+        <p class="uniq"><b>Unique here</b>What hangs from it. Boston's flies the flag of the Republic of China; London's carries a banner with the logos of Beijing's tourist office and Hong Kong's trade office.</p>
+        <a class="go" href="#gates">Read both gates →</a>
+      </article>
+      <article class="gcard rv">
+        <a class="gimg" href="#read-tenement"><img loading="lazy" decoding="async" src="guide/escape.jpg" width="600" height="750" alt="Iron fire escapes zigzagging down a brick tenement on Mott Street, under a neon sign."></a>
+        <span class="tag">New York · required from 1867</span>
+        <h4>The fire escape</h4>
+        <p class="gl">How to spot one</p>
+        <ul><li>An iron balcony at every floor</li><li>Steep stairs zigzagging down the front</li><li>A last ladder that drops to the pavement</li></ul>
+        <p class="uniq"><b>Unique here</b>On Mott Street the escapes frame signs in two Chinese scripts, simplified and traditional, from two eras of migration.</p>
+        <a class="go" href="#read-tenement">Read the photo →</a>
+      </article>
+      <article class="gcard rv">
+        <a class="gimg" href="#read-k6"><img loading="lazy" decoding="async" src="guide/k6.jpg" width="720" height="900" alt="The top of a weathered red K6 telephone box with its crown and TELEPHONE sign."></a>
+        <span class="tag">Britain · K6, 1935</span>
+        <h4>The red phone box</h4>
+        <p class="gl">How to spot one</p>
+        <ul><li>A domed roof</li><li>A crown above a lit TELEPHONE sign</li><li>Eight rows of panes, the middle column wider</li></ul>
+        <p class="uniq"><b>Unique here</b>The Penarth box seems to keep the Tudor crown used on K6s until 1953, under layers of sea-worn red paint.</p>
+        <a class="go" href="#read-k6">Read the photo →</a>
+      </article>
+      <article class="gcard rv">
+        <a class="gimg" href="#read-gielgud"><img loading="lazy" decoding="async" src="guide/theatre.jpg" width="600" height="750" alt="The Gielgud Theatre's rounded stone corner with columns, round windows and its name in lights."></a>
+        <span class="tag">Shaftesbury Avenue · 1906</span>
+        <h4>The theatre corner</h4>
+        <p class="gl">How to spot one</p>
+        <ul><li>A rounded corner with giant columns</li><li>Round bull's-eye windows up top</li><li>A stone front hung with lit show signs</li></ul>
+        <p class="uniq"><b>Unique here</b>Built as one of twins at either end of a single block. The other twin lost its front to a bomb in 1940.</p>
+        <a class="go" href="#read-gielgud">Read the photo →</a>
+      </article>
+    </div>
+
+    <hr class="rule">
+    <div class="feat rv">
+      <p class="kicker">Close readings</p>
+      <h3 class="fh"><span class="cap">A</span> city of arcades</h3>
+      <p class="flabel">Cardiff, 1858–1902</p>
+      <p class="fbody">Cardiff calls itself the City of Arcades: it has the highest concentration of Victorian and Edwardian shopping arcades of any British city. An arcade is a street with a roof on it, lined with small shops and lit from above.</p>
+      <div class="prose"><p>The first, the Royal Arcade, opened in 1858, when Cardiff was only beginning to boom as a coal port. Six more followed in the next 44 years, and every one is now a listed building. Their roofs borrowed from the train sheds of the day, and their shopfronts stayed small, so they still feel like the streets of a much older town tucked inside the modern centre.</p>
+      <p>The Castle Arcade of 1887 is listed as the finest. It turns a corner on its way from the High Street to the castle, its upper floors are wooden galleries, and footbridges with ivy-leaf ironwork cross the passage at first-floor level. Tap the numbers to read the photo.</p></div>
+    </div>
+    <div class="annot rv" data-annot="castle"></div>
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">T</span>he department store's street</h3>
+      <p class="flabel">Morgan Arcade, 1896–99</p>
+      <p class="fbody">David Morgan's department store built this arcade to link its two entrances, on St Mary Street and The Hayes. It opened in 1899 as the New Central Arcade.</p>
+      <div class="prose"><p>Some of its first-floor Venetian windows survive, and so do original wooden shopfronts: slender frames that are almost all glass, so the goods do the talking. One of them now belongs to Spillers Records, founded in 1894 and recognised as the oldest record shop in the world.</p></div>
+    </div>
+    <div class="annot rv" data-annot="morgan"></div>
+    <div class="prints" data-web="royalarcade,castlearcade,spillers"></div>
+    <details class="more">
+      <summary>Cardiff's arcades, oldest first</summary>
+      <div class="more-body">
+        <ol class="tl">
+          <li><b>1858</b>Royal Arcade, the oldest. Grade II, with some original shopfronts.</li>
+          <li><b>1885</b>High Street Arcade. Grade II.</li>
+          <li><b>1887</b>Castle Arcade, L-shaped, with wooden galleries and footbridges. Grade II*, like the Central Market.</li>
+          <li><b>1887</b>Wyndham Arcade. Grade II.</li>
+          <li><b>1891</b>Central Market, a covered market hall with a balcony running around the walls. Grade II*.</li>
+          <li><b>1896–99</b>Morgan Arcade, opened as the New Central Arcade, with Venetian windows and slender wooden shopfronts. Grade II.</li>
+          <li><b>1902</b>Duke Street Arcade. Grade II.</li>
+        </ol>
+      </div>
+    </details>
+
+    <hr class="rule" id="gates">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">A</span> gate that says “enter”</h3>
+      <p class="flabel">The paifang, or Chinatown arch</p>
+      <p class="fbody">A paifang is a traditional Chinese gateway. In ancient Chinese cities each walled ward had gates that were shut and guarded every night. Over the centuries the gate became purely decorative, and abroad it became the sign for “Chinatown”.</p>
+      <div class="prose"><p>The classic parts are posts, tiled roofs with upturned eaves and small beasts on the ridges, and a central board of calligraphy. The first one in the United States was a temporary gate at San Francisco's 1915 world's fair; the oldest still standing is Los Angeles' West Gate of 1938. Washington's Friendship Archway (1986) is one of the biggest, and Liverpool's (2000) is the largest in Europe.</p>
+      <p>London's and Boston's gates look alike, but read what hangs on them and they tell opposite political stories.</p></div>
+    </div>
+    <div class="annot rv" data-annot="london"></div>
+    <div class="annot rv" data-annot="boston"></div>
+
+    <hr class="rule" id="fire-escapes">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">S</span>tairs on the outside</h3>
+      <p class="flabel">New York's tenements</p>
+      <p class="fbody">The zigzag iron stairs on Mott Street are there by law. New York's Tenement House Act of 1867 required a fire escape from every apartment, and iron balconies and ladders bolted to the street front became the usual answer.</p>
+      <div class="prose"><p>Later laws went after light and air. The 1879 act said every room needed a window to the open air, which produced narrow “dumbbell” tenements with air shafts between buildings; the 1901 act replaced the shafts with proper courtyards. The fire escapes became extra rooms, for plants, bikes and, on hot summer nights, sleeping. In <i>Rear Window</i> a couple drags their mattress onto one; in <i>West Side Story</i> it's where Tony and Maria meet.</p></div>
+    </div>
+    <div class="annot rv" data-annot="tenement"></div>
+
+    <hr class="rule">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">T</span>he red box</h3>
+      <p class="flabel">The K6 telephone kiosk</p>
+      <p class="fbody">Sir Giles Gilbert Scott designed the K6 in 1935 for George V's Silver Jubilee, as a smaller, cheaper version of his earlier K2. It was the first red box used widely outside London, and public telephones in Britain rose from 19,000 in 1935 to 35,000 in 1940.</p>
+      <div class="prose"><p>About 2,000 old phone boxes are now listed buildings. Many no longer hold a phone at all: under BT's Adopt a Kiosk scheme, communities have turned them into tiny libraries and homes for defibrillators.</p></div>
+    </div>
+    <div class="annot rv" data-annot="k6"></div>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ VII PLAQUES ============ -->
+<section class="chapter" id="memory" data-chapter="memory">
+  <header class="opener">
+    <img src="op/IMG_1118.jpg" width="2000" height="1500" alt="A round blue plaque for the Court House on a stone gatepost in Llantwit Major." loading="lazy">
+    <h2 class="op-title">Plaques</h2>
+    <p class="op-line"><span class="cap">W</span>ho gets to write the history?</p>
+    <span class="op-cred">Llantwit Major</span>
+    <span class="op-num"><b>Chapter</b>VII</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">T</span>he authority of blue</h3>
+      <p class="flabel">Since 1866</p>
+      <p class="fbody">Blue plaques began in London in 1866, when the Society of Arts started marking the homes of famous people. The first, for Lord Byron, went up in 1867.</p>
+      <div class="prose"><p>The official London scheme, now run by English Heritage, says a person must have been dead for 20 years, which keeps it slow and careful. The idea spread everywhere. Local societies, councils, the BBC and private trusts now put up plaques in the same blue, and the colour carries the authority whoever paid for it.</p>
+      <p>The Llantwit Major Local History Society marks the Court House and St Illtud's Church, which grew from a monastic college founded in the early 500s and is sometimes called the “Westminster Abbey of Wales”. The David Bowie plaque isn't English Heritage: BBC Music Day and the British Plaque Trust unveiled it in 2017 outside Trident Studios in Soho, where he recorded Hunky Dory and Ziggy Stardust, only a year after he died.</p></div>
+    </div>
+    <div class="gallery" data-ids="DSC_0781,IMG_8744,IMG_1121,IMG_8743"></div>
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">N</span>othing happened here</h3>
+      <p class="flabel">Invented memory</p>
+      <p class="fbody">The “On this site Sept. 5, 1782 nothing happened” plaque is a mass-produced joke. The exact same words are on a guesthouse in Malvern.</p>
+      <div class="prose"><p>A notice on a lamppost from a made-up “Bureau of Urban Re-cooptation” reclassifies a streetlight as a “Nocturnal Observation Post”. Both jokes work because we've learned to trust anything that looks official.</p></div>
+    </div>
+    <div class="gallery" data-ids="IMG_8733,IMG_8731"></div>
+    <details class="more">
+      <summary>St Illtud's Church in seven dates</summary>
+      <div class="more-body">
+        <ol class="tl">
+          <li><b>Early 500s</b>Illtud founds a monastic college here, one of the earliest centres of learning in Britain.</li>
+          <li><b>800s</b>Carved standing stones and Celtic crosses are set up on the site. They're now inside the West Church.</li>
+          <li><b>After 1066</b>The Normans give the church's income to Tewkesbury Abbey and build a new church.</li>
+          <li><b>1200s</b>A tower and a large monastic farm are added. The East Church is built for the farm community.</li>
+          <li><b>c. 1400</b>The East Church gets aisles and a taller tower. The Galilee chapel is added to the West Church.</li>
+          <li><b>c. 1500</b>The Raglan family endows the Galilee chapel as a chantry.</li>
+          <li><b>August 1940</b>A German bomb badly damages the chantry priest's house.</li>
+        </ol>
+      </div>
+    </details>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ VIII MESSAGES ============ -->
+<section class="chapter" id="messages" data-chapter="messages">
+  <header class="opener">
+    <img src="op/IMG_8781.jpg" width="1500" height="2000" alt="Chalk writing on a dark shed wall: Good better best, never ever rest." loading="lazy" style="object-position:50% 45%">
+    <h2 class="op-title">Messages</h2>
+    <p class="op-line"><span class="cap">N</span>otes to whoever walks past next.</p>
+    <span class="op-cred">Cardiff</span>
+    <span class="op-num"><b>Chapter</b>VIII</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">T</span>he street's comments section</h3>
+      <p class="flabel">Chalk, stickers, tape</p>
+      <p class="fbody">Between the official signs, people leave their own: chalk on a shed, stickers on a bin, a drawing taped to a utility box, a card in a church asking you to hold a prayer as you leave.</p>
+      <div class="prose"><p>Even the clothes bank speaks two languages. Welsh is spoken by about one in six people in Wales, and it appears on everything from road signs to charity bins, next to the red dragon of the Welsh flag.</p></div>
+    </div>
+    <div class="gallery" data-ids="IMG_8756,IMG_8792,IMG_1130,IMG_8755,IMG_8762,IMG_8757,IMG_8766,IMG_1113"></div>
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">Q</span>ueen Street, 120 years apart</h3>
+      <p class="flabel">Cardiff</p>
+      <p class="fbody">In 1905 the messages were painted shop signs and awnings, and the street belonged to trams and carts. Today it's pedestrianised, and the loudest message is a digital billboard.</p>
+    </div>
+    <div class="tn rv" data-pair="wal_queenst1905|IMG_8782|c. 1905 · Queen Street|2026 · Queen Street"></div>
+    <div class="gallery" data-ids="IMG_8783"></div>
+    <div class="label-line">From the archive</div>
+    <div class="prints" data-arch="wal_cowbridge1905"></div>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ IX EDGES ============ -->
+<section class="chapter" id="edges" data-chapter="edges">
+  <header class="opener">
+    <img src="arch/wal_penarthcolor.jpg" width="1400" height="1057" alt="A colour photochrom print from the 1890s of Penarth beach and pier." loading="lazy">
+    <h2 class="op-title">Edges</h2>
+    <p class="op-line"><span class="cap">W</span>here the town meets the sea.</p>
+    <span class="op-cred">Penarth, 1890–1900 · Photochrom, Library of Congress</span>
+    <span class="op-num"><b>Chapter</b>IX</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">S</span>mall towns, sea fronts</h3>
+      <p class="flabel">Barry Island · Penarth · Llantwit Major</p>
+      <p class="fbody">The old photographs show how little some places change. The rocks and tidal pool at Barry Island and the railings of Penarth's promenade are still where they were in 1905.</p>
+    </div>
+    <div class="tn rv" data-pair="wal_barry1905|IMG_8768|c. 1905 · Barry Island|2026 · Barry Island"></div>
+    <div class="tn rv" data-pair="wal_penarth1905|IMG_8774|c. 1905 · Penarth|2026 · Penarth"></div>
+    <div class="gallery" data-ids="IMG_8746,IMG_8725,IMG_8740,IMG_8748,IMG_1114,IMG_1115"></div>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+
+<!-- ============ X ARCHIVE ============ -->
+<section class="chapter" id="archives" data-chapter="archives">
+  <header class="opener">
+    <img src="arch/nyc_ct1.jpg" width="1400" height="1026" alt="A 1910s glass-plate photograph of a Chinatown street in New York with a café awning and fire escapes." loading="lazy">
+    <h2 class="op-title">Archive</h2>
+    <p class="op-line"><span class="cap">E</span>very image, and where it came from.</p>
+    <span class="op-cred">Chinatown, New York, c. 1910–15 · Bain News Service</span>
+    <span class="op-num"><b>Chapter</b>X</span>
+  </header>
+  <div class="paper"><div class="inner">
+    <div class="feat rv">
+      <h3 class="fh"><span class="cap">P</span>rints and maps</h3>
+      <p class="flabel">Public domain and openly licensed</p>
+      <p class="fbody">Every archive image and outside photo here is out of copyright or openly licensed, and each links back to its source. Tap a print to see it larger.</p>
+    </div>
+    <div class="prints" data-arch="map_booth_soho,nyc_mott,nyc_reform,nyc_newyear1909,nyc_ct1,nyc_street,lon_limehouse1936,lon_v2_1945,lon_shaftesbury1940,lon_lyric1943,bos_beach1868,wal_llantwit1975,wal_cowbridge1905,wal_queenst1905,wal_butest1905,wal_barry1905,wal_penarth1905,wal_penarthcolor,tac_okayama"></div>
+    <div class="label-line">Photos by other photographers</div>
+    <div class="prints" data-web="caillebotte,royalarcade,castlearcade,spillers,domes_ramp,domes_platform,jp_tokyo,cn_shenzhen,cn_bikes,cn_huanggang,grid1821,levittown,artery,ldn_dragon"></div>
+    <div class="label-line">Collections to explore</div>
+    <div class="arch">
+      <a href="https://www.loc.gov/collections/bain/?fa=location%3Anew+york%7Csubject%3Achinatown+%28new+york%2C+n.y.%29" target="_blank" rel="noopener"><span class="tag">New York · Library of Congress</span><strong>Bain Collection: Chinatown</strong><span>Early 1900s news photographs of Chinatown streets, halls and celebrations.</span></a>
+      <a href="https://blogs.baruch.cuny.edu/asianamericanhistorynyc/?p=168" target="_blank" rel="noopener"><span class="tag">New York · Baruch College</span><strong>The China Tower, 62 Mott Street</strong><span>The CCBA and the Kuomintang's hold on Chinatown politics.</span></a>
+      <a href="https://www.thelondonarchives.org/your-research/research-guides/chinese-histories" target="_blank" rel="noopener"><span class="tag">London · The London Archives</span><strong>Chinese histories research guide</strong><span>Oral histories of Limehouse, restaurant building plans and community records.</span></a>
+      <a href="https://londonsociety.org.uk/archive-search-old-chinatown/" target="_blank" rel="noopener"><span class="tag">London · The London Society</span><strong>In search of old Chinatown</strong><span>Looking for the lost Limehouse Chinatown.</span></a>
+      <a href="https://archive.british-history.ac.uk/survey-london/vols33-4?page=1" target="_blank" rel="noopener"><span class="tag">London · Survey of London</span><strong>St Anne Soho (vols 33–34)</strong><span>The building history of Gerrard Street, house by house.</span></a>
+      <a href="https://www.chinatownatlas.org/?p=27" target="_blank" rel="noopener"><span class="tag">Boston · MIT and partners</span><strong>Boston Chinatown Atlas</strong><span>Maps, photos and stories of how the neighbourhood grew and was cut by highways.</span></a>
+      <a href="https://chinatowncollections.library.northeastern.edu/en/collections.html" target="_blank" rel="noopener"><span class="tag">Boston · Northeastern University</span><strong>Chinatown collections</strong><span>Digitised community archives of Boston's Chinatown.</span></a>
+      <a href="https://llantwitmajorhistorysociety.co.uk/" target="_blank" rel="noopener"><span class="tag">Wales · Local history society</span><strong>Llantwit Major History Society</strong><span>The people behind the blue plaques, with town history and walks.</span></a>
+      <a href="https://www.peoplescollection.wales/items/194" target="_blank" rel="noopener"><span class="tag">Wales · People's Collection Wales</span><strong>The 1911 seamen's strike</strong><span>A strike meeting at Bute Docks, and the attacks on Chinese sailors and residents.</span></a>
+    </div>
+    <details class="more sources" id="credits">
+      <summary>Sources for the text and imagery</summary>
+      <div class="more-body">
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Tactile_paving" target="_blank" rel="noopener">Tactile paving</a>, <a href="https://99percentinvisible.org/article/death-tactile-paving-chinas-precarious-paths-visually-impaired/" target="_blank" rel="noopener">99% Invisible on China's blind paths</a>, <a href="https://en.wikipedia.org/wiki/Belisha_beacon" target="_blank" rel="noopener">Belisha beacon</a>, <a href="https://research.aber.ac.uk/en/publications/symbols-of-justice-the-welsh-language-societys-campaign-for-bilin/" target="_blank" rel="noopener">Merriman &amp; Jones (2009)</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Public_Land_Survey_System" target="_blank" rel="noopener">Public Land Survey System</a>, <a href="https://en.wikipedia.org/wiki/Commissioners%27_Plan_of_1811" target="_blank" rel="noopener">Commissioners' Plan of 1811</a>, <a href="https://en.wikipedia.org/wiki/Village_of_Euclid_v._Ambler_Realty_Co." target="_blank" rel="noopener">Euclid v. Ambler</a>, <a href="https://en.wikipedia.org/wiki/Federal-Aid_Highway_Act_of_1956" target="_blank" rel="noopener">Federal-Aid Highway Act</a>, <a href="https://en.wikipedia.org/wiki/Town_and_Country_Planning_Act_1947" target="_blank" rel="noopener">Town and Country Planning Act 1947</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Hostile_architecture" target="_blank" rel="noopener">Hostile architecture</a>, <a href="https://en.wikipedia.org/wiki/Camden_bench" target="_blank" rel="noopener">Camden bench</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Mott_Street" target="_blank" rel="noopener">Mott Street</a>, <a href="https://en.wikipedia.org/wiki/Chinese_Community_Center" target="_blank" rel="noopener">Chinese Community Center</a>, <a href="https://en.wikipedia.org/wiki/Chinese_Empire_Reform_Association" target="_blank" rel="noopener">Chinese Empire Reform Association</a>, <a href="https://www.pacificcouncil.org/node/1309" target="_blank" rel="noopener">Pacific Council on the ROC flag</a>, <a href="https://en.wikipedia.org/wiki/Chinatown,_London" target="_blank" rel="noopener">Chinatown, London</a>, <a href="https://en.wikipedia.org/wiki/Gerrard_Street,_London" target="_blank" rel="noopener">Gerrard Street</a>, <a href="https://www.sinicapodcast.com/p/this-week-in-chinas-history-britain" target="_blank" rel="noopener">Sinica: Britain recognises the PRC</a>, <a href="https://en.wikipedia.org/wiki/Chinatown,_Boston" target="_blank" rel="noopener">Chinatown, Boston</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Shaftesbury_Avenue" target="_blank" rel="noopener">Shaftesbury Avenue</a>, <a href="https://en.wikipedia.org/wiki/Lyric_Theatre,_London" target="_blank" rel="noopener">Lyric Theatre</a>, <a href="https://en.wikipedia.org/wiki/Gielgud_Theatre" target="_blank" rel="noopener">Gielgud Theatre</a>, <a href="https://en.wikipedia.org/wiki/Sondheim_Theatre" target="_blank" rel="noopener">Sondheim Theatre</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/List_of_shopping_arcades_in_Cardiff" target="_blank" rel="noopener">Shopping arcades in Cardiff</a>, <a href="https://en.wikipedia.org/wiki/Morgan_Arcade" target="_blank" rel="noopener">Morgan Arcade</a>, <a href="https://soundofthehound.com/record-shops/spillers-records-the-oldest-record-shop-in-the-world/" target="_blank" rel="noopener">Spillers Records</a>, <a href="https://en.wikipedia.org/wiki/Paifang" target="_blank" rel="noopener">Paifang</a>, <a href="https://en.wikipedia.org/wiki/Old_Law_Tenement" target="_blank" rel="noopener">Old Law Tenement</a>, <a href="https://en.wikipedia.org/wiki/Fire_escape" target="_blank" rel="noopener">Fire escape</a>, <a href="https://en.wikipedia.org/wiki/Red_telephone_box" target="_blank" rel="noopener">Red telephone box</a></li>
+          <li><a href="https://www.english-heritage.org.uk/visit/blue-plaques/about-blue-plaques/top-ten-blue-plaque-facts/" target="_blank" rel="noopener">English Heritage blue plaques</a>, <a href="https://www.musicweek.com/media/read/bbc-music-day-blue-plaque-unveiled-in-honour-of-david-bowie/068821" target="_blank" rel="noopener">Music Week on the Bowie plaque</a>, <a href="https://readtheplaque.com/plaque/nothing-happened" target="_blank" rel="noopener">Read the Plaque: Nothing Happened</a>, <a href="https://llantwitmajorhistorysociety.co.uk/st-illtuds-church/" target="_blank" rel="noopener">St Illtud's Church</a>, <a href="https://www.peoplescollection.wales/items/194" target="_blank" rel="noopener">People's Collection Wales</a></li>
+          <li>Satellite imagery: <a href="https://cloudless.eox.at" target="_blank" rel="noopener">EOxCloudless 2024</a> by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2024), used non-commercially under <a href="https://cloudless.eox.at/documentation/license" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>.</li>
+        </ul>
+      </div>
+    </details>
+    <a class="back" href="#top">Back to the index ↑</a>
+  </div></div>
+</section>
+</main>
+
+<footer>
+  <div class="inner">
+    <div class="sig">Street Gr<em>a</em>mmar</div>
+    <p>Photographs by Eric Zhang unless credited. Welsh photos from a psychogeography project week in March 2026, run from UWC Atlantic in Llantwit Major. Photo locations come from phone GPS; camera photos have no GPS, so they're placed by what they show.</p>
+    <p>Number plates have been blurred and some people cropped out. A handwritten charity sign was left out to protect the person who wrote it. Satellite views: EOxCloudless 2024 by EOX IT Services GmbH, contains modified Copernicus Sentinel data 2024 (CC BY-NC-SA 4.0). Archive and outside photos are credited on each image.</p>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <button class="close" id="lb-close" type="button">Close</button>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+  <p class="lb-credit" id="lb-credit"></p>
+</dialog>
+
+<script>
+const S={"DSC_0547":[1400,934],"DSC_0549":[1400,934],"DSC_0551":[1400,934],"DSC_0554":[1400,934],"DSC_0737":[1400,934],"DSC_0738":[1400,934],"DSC_0739":[1400,934],"DSC_0740":[1400,934],"DSC_0742":[1400,934],"DSC_0746":[1400,934],"DSC_0747":[1400,934],"DSC_0748":[1400,934],"DSC_0749":[1400,934],"DSC_0756":[1400,934],"DSC_0757":[1400,934],"DSC_0758":[1400,934],"DSC_0761":[1400,934],"DSC_0762":[1400,934],"DSC_0764":[1400,934],"DSC_0767":[1400,934],"DSC_0768":[1400,934],"DSC_0781":[1400,934],"IMG_1112":[1050,1400],"IMG_1113":[1050,1400],"IMG_1114":[1400,1050],"IMG_1115":[1400,1050],"IMG_1118":[1400,1050],"IMG_1121":[1050,1400],"IMG_1123":[1050,1400],"IMG_1128":[1050,1400],"IMG_1130":[1050,1400],"IMG_8719":[1050,1400],"IMG_8725":[1050,1400],"IMG_8727":[1050,1400],"IMG_8731":[1050,1400],"IMG_8733":[1050,1400],"IMG_8740":[1050,1400],"IMG_8743":[1400,1050],"IMG_8744":[1050,1400],"IMG_8746":[1050,1400],"IMG_8748":[1050,1400],"IMG_8754":[1094,1400],"IMG_8755":[1050,1400],"IMG_8756":[1400,1050],"IMG_8757":[1400,1050],"IMG_8762":[1050,1400],"IMG_8766":[1050,1400],"IMG_8768":[1050,1400],"IMG_8773":[1050,1400],"IMG_8774":[1050,1400],"IMG_8778":[1050,1400],"IMG_8781":[1050,1400],"IMG_8782":[1050,1400],"IMG_8783":[693,1400],"IMG_8792":[1050,1400],"IMG_9500":[1050,1400]};
+
+const P={
+ IMG_1112:["Llantwit Major · 23 Mar","Zebra crossing near the station: a Belisha beacon above, a pad of red blister paving at the kerb edge."],
+ DSC_0738:["Cardiff city centre","A buff ribbed strip runs down the pedestrian street. A steel bollard has been planted straight into it, and the tiles around it are cracked and patched."],
+ DSC_0740:["Cardiff city centre","The same strip further on, worn smooth in places and spotted with old chewing gum. It is meant to be read by feet, but most people walk right over it."],
+ DSC_0739:["Cardiff city centre","Two drainage channels and a tactile slab share one pavement. Lines for water, lines for people."],
+ IMG_1123:["Llantwit Major · 23 Mar","Waymarker disc on a wooden post: Public Footpath / Llwybr Cyhoeddus. In Wales even the arrow is bilingual."],
+ DSC_0747:["Cardiff city centre","Every seat is divided by a curved steel arm. You can sit, but you can't lie down."],
+ IMG_8778:["Cardiff · 26 Mar","A long slatted bench with a raised block halfway along, a quieter version of the same idea."],
+ DSC_0748:["Cardiff city centre","A metal stud fixed to a planter edge, right where a skateboard would grind along it."],
+ DSC_0737:["Cardiff city centre","A polished steel bench with hoops for armrests. Hard to get comfortable on for long."],
+ DSC_0749:["Cardiff city centre","A smooth concrete ledge beside steps. Is it a seat, a wall or an obstacle? It doesn't say."],
+ IMG_8719:["Llantwit Major · 23 Mar","Bus shelter by the station. Red perch seats, built for a short wait rather than a rest."],
+ DSC_0547:["Manhattan Chinatown","A neon “Welcome” sign in English and Chinese hangs between fire-escaped tenements, with Big Wong restaurant on the corner."],
+ DSC_0551:["Manhattan Chinatown","A Republic of China (Taiwan) flag beside a Year of the Horse 2026 banner from the Chinatown business district, sponsored by Flushing Bank."],
+ DSC_0554:["Manhattan Chinatown","US and ROC flags outside the Kuomintang's eastern US branch office. The politics of another country, flying over a New York street."],
+ DSC_0549:["Mott Street, Manhattan","A red Chinese knot fixed to a lamppost, next to the Mott Street sign and a souvenir stall with a big NY on its canopy."],
+ DSC_0764:["Gerrard Street, London","The Chinatown gate under strings of red lanterns. A gate is an invitation: this way in."],
+ DSC_0761:["Chinatown, London","A lion's head in the lantern lines at a street corner, high above the crowds."],
+ DSC_0767:["Newport Place, London","City of Westminster street sign in English and Chinese: 新港坊, signed 西敏市."],
+ DSC_0768:["Gerrard Place, London","Another bilingual Westminster sign, above a noodle bar. The council itself writes in Chinese here."],
+ DSC_0762:["Gerrard Street, London","The lantern ceiling at dusk, with a games arcade on one side and a clock on the other."],
+ IMG_9500:["Boston Chinatown · 15 Jun","The Boston gate, inscribed 天下為公 (“the world belongs to all”), with US and ROC flags hanging underneath."],
+ IMG_8727:["Llantwit Major · 23 Mar","The Court House plaque on its gatepost."],
+ IMG_1118:["Llantwit Major · 23 Mar","Court House, “also known as Ivy House”: a 16th-century town house, marked by the local history society."],
+ IMG_8744:["Llantwit Major · 23 Mar","St Illtud's Church: “originally a Celtic site, founded by St. Illtud around 500.”"],
+ IMG_8733:["Llantwit Major · 23 Mar","The same blue, the same serif, the same confidence: “On this site Sept. 5, 1782 nothing happened.”"],
+ IMG_8731:["Llantwit Major · 23 Mar","A notice on a lamppost from a “Bureau of Urban Re-cooptation”. Infrastructure class: Nocturnal Observation Post. Operational outcome: Panoptical boost."],
+ DSC_0781:["Soho, London","David Bowie's blue plaque outside Trident Studios, put up by BBC Music Day and the British Plaque Trust in 2017."],
+ IMG_1121:["Llantwit Major · 23 Mar","“Lorna Hughes Park, Opened 26.09.1998.” A small plaque with a name few visitors would know."],
+ IMG_8743:["St Illtud's Church · 23 Mar","Church wardens' names from 1854 above a carved Last Supper. Who gets remembered, and in what material."],
+ IMG_8781:["Cardiff · 26 Mar","Chalked on a shed: “Good better best, never ever rest, until your good is better and your better's best.”"],
+ IMG_8792:["Cardiff Bay · 26 Mar","A hand-drawn orange creature taped to utility box 104, next to a traffic cone."],
+ IMG_1130:["St Illtud's Church · 23 Mar","A card asks visitors to hold their prayer as they leave, and a notebook lies open for more."],
+ IMG_8756:["Cowbridge · 24 Mar","A bench marking an “80th Anniversary”, its backrest lined with Union Jack stickers."],
+ IMG_8755:["Cowbridge · 24 Mar","Tape around a lamppost, covered in purple scribbles. Someone is tagging without spray paint."],
+ IMG_8757:["Cowbridge · 24 Mar","More tape, blue this time, on the next pole along."],
+ IMG_8762:["Cowbridge · 24 Mar","A steel bin collecting stickers as well as rubbish."],
+ IMG_8766:["Cowbridge · 24 Mar","A tiny cartoon sticker at the foot of a steel post, with a weed pushing through the paving beside it."],
+ IMG_1113:["Llantwit Major · 23 Mar","A clothes bank with a red dragon: “Dragon Bags (Bagiau Dragon)”, raising money for a school."],
+ IMG_8782:["Queen Street, Cardiff · 26 Mar","Gig posters on a pillar, with two gulls standing on top."],
+ IMG_8783:["Queen Street, Cardiff · 26 Mar","A digital billboard plays a giant face over the shopping street."],
+ IMG_8725:["Llantwit Major · 23 Mar","Magnolia over a red hatchback, petals all over the driveway."],
+ IMG_8746:["Llantwit Major · 23 Mar","No. 10: a stone cottage with two blue-grey doors, one with a wreath and a cat flap."],
+ IMG_8740:["Llantwit Major · 23 Mar","One telegraph pole, a dozen wires fanning out to the houses around it."],
+ IMG_8748:["Llantwit Major · 23 Mar","A new Morgan sports car parked outside an ordinary semi. Number plate blurred."],
+ IMG_1114:["Llantwit Major · 23 Mar","A service yard: bins, a tarpaulin and a hedge."],
+ IMG_1115:["Llantwit Major · 23 Mar","A mud kitchen under a tree behind a fence, where children are allowed to make a mess."],
+ DSC_0742:["Morgan Arcade, Cardiff","The Morgan Arcade, built 1896–99 for the David Morgan department store: a street with a roof on it."],
+ DSC_0746:["Cardiff arcade","Glass roof, shopfronts, a café's chairs folded against the wall."],
+ IMG_8768:["Barry Island · 25 Mar","The beach with the tide coming in under a big sky."],
+ IMG_8773:["Penarth · 25 Mar","A red phone box on the esplanade, with a turreted seafront building behind."],
+ IMG_8774:["Penarth · 25 Mar","Ice cream by the railings, the Bristol Channel flat behind."],
+ DSC_0756:["Shaftesbury Avenue, London","Hadestown at the Lyric, the oldest theatre still standing on the avenue (1888)."],
+ DSC_0757:["Shaftesbury Avenue, London","The twins: the Gielgud's carved 1906 corner, and next door the Sondheim's plainer front, rebuilt after a 1940 bomb, with Les Misérables. Number plates blurred."],
+ DSC_0758:["Shaftesbury Avenue, London","Les Misérables on the Sondheim's rounded modern corner, the part rebuilt after the bomb."]
+};
+
+const C='https://commons.wikimedia.org/wiki/File:';
+const A={
+ nyc_mott:[521,822,"Mott Street, New York · early 1900s postcard","Mott Street on a hand-coloured postcard. Carved, painted balconies dress up ordinary tenement fronts. Postcards like this were made for visitors, so Chinatown was already a sight to see.","Postcard, public domain, via Wikimedia Commons",C+"Mott_Street_(NBY_5011).jpg"],
+ nyc_reform:[1024,800,"Reform Association, Chinatown · early 1900s","Members inside the hall of the Chinese Empire Reform Association, which had its New York base on Mott Street. Its members wanted China to keep an emperor under a constitution. Sun Yat-sen's revolutionaries wanted a republic, and in 1911 they won.","Bain News Service, Library of Congress, public domain",C+"Chinese_Reformation,_Chinatown_LCCN2014681549.jpg"],
+ nyc_newyear1909:[1400,998,"Chinatown, New York · Chinese New Year, 1909","A man and a boy walk past the stoops of a Chinatown street on New Year's Day.","Bain News Service, Library of Congress, public domain",C+"Chinatown,_New_York_City_-_Chinese_New_Year_LCCN2001704350.jpg"],
+ nyc_ct1:[1400,1026,"Chinatown, New York · c. 1910–15","Café Mandarin under a striped awning, with fire escapes above. The same kind of tenement still lines Mott Street.","Bain News Service, Library of Congress, public domain",C+"Chinatown_LCCN2014698355.jpg"],
+ nyc_street:[1400,1041,"Chinatown, New York · early 1900s","A printing shop on a Chinatown street, its windows covered in signs.","Bain News Service, Library of Congress, public domain",C+"Chinatown_from_street_LCCN2014684608.jpg"],
+ map_booth_soho:[1300,1257,"Gerrard Street on Charles Booth's poverty map · 1898–99","Booth's researchers coloured every street by how well off its residents were. Gerrard and Lisle Streets are pink and mauve, meaning “fairly comfortable” to “mixed”. Shaftesbury Avenue runs diagonally across, with theatres already marked. Half a century later this block became Chinatown.","Charles Booth, Maps Descriptive of London Poverty, sheet 61 (detail). Public domain",C+"Hand_Coloured_Map_Descriptive_of_London_Poverty_1898-1899_Sheet_61_-_Mayfair,_Westminster,_Bloomsbury.jpg"],
+ lon_limehouse1936:[700,590,"Limehouse Causeway, East London · November 1936","The heart of London's first Chinatown, near the docks: a narrow street of small terraced houses and shops.","Unknown photographer, public domain, via Wikimedia Commons",C+"Limehouse_Causeway_November_1936.jpg"],
+ lon_v2_1945:[800,644,"Chinatown, Limehouse · March 1945","A man inspects part of a V2 rocket among the ruins of Limehouse's Chinatown. Wartime bombing helped end the old Chinatown, and Soho's grew in its place.","Imperial War Museum HU 44973, public domain",C+"The_London_Blitz_-_V2_Rocket_Bomb_Incident_at_Chinatown,_Limehouse,_East_London,_March_1945_HU44973.jpg"],
+ lon_shaftesbury1940:[1400,1101,"Shaftesbury Avenue · 1940","Looking down Shaftesbury Avenue towards the Lyric and Apollo theatres in the year the Blitz began.","Ministry of Information, IWM D 1791, public domain",C+"A_general_view_looking_down_Shaftesbury_Avenue_towards_the_Lyric_and_Apollo_Theatres_in_1940._D1791.jpg"],
+ lon_lyric1943:[766,800,"The Lyric Theatre · August 1943","A queue for tickets outside the Lyric in wartime. The same doors now lead to Hadestown.","Ministry of Information, IWM D 16393, public domain",C+"Wartime_Theatre-_Entertainment_in_London,_England,_UK,_August_1943_D16393.jpg"],
+ bos_beach1868:[809,711,"Beach Street, Boston · 1868 map","The streets that became Boston's Chinatown, mapped a few years before the first Chinese residents arrived in the 1870s.","Sampson, Davenport & Co., Boston Public Library, public domain",C+"1868_BeachSt_Boston_map_detail_BPL11019.png"],
+ wal_llantwit1975:[640,545,"Church Street, Llantwit Major · 1970s","Looking down Church Street to St Illtud's tower, about fifty years before this walk.","Photo: eswales, via Geograph, CC BY-SA 2.0",C+"Church_Street,_Llantwit_Major_in_the_1970s_-_geograph.org.uk_-_3041180.jpg"],
+ wal_cowbridge1905:[1200,905,"Cowbridge · c. 1905","An arched gateway and cottage in Cowbridge, photographed for a series of postcards of South Wales towns.","Martin Ridley Collection, public domain",C+"The_Arch_&_Cottage,_Cowbridge_(4641405).jpg"],
+ wal_queenst1905:[1200,920,"Queen Street, Cardiff · c. 1905","Trams, horse carts and shop awnings on Cardiff's main shopping street.","Martin Ridley Collection, public domain",C+"Queen_Street,_Cardiff_(4641724).jpg"],
+ wal_butest1905:[1200,903,"Bute Street, Cardiff docks · c. 1905","The heart of the docklands later known as Tiger Bay, home to sailors from all over the world.","Martin Ridley Collection, public domain",C+"Bute_St,_Docks,_Cardiff_(4641699).jpg"],
+ wal_barry1905:[1200,919,"Whitmore Bay, Barry Island · c. 1905","Families on the rocks by the tidal pool, on a day out by the sea.","Martin Ridley Collection, public domain",C+"Whitmore_Bay,_Barry_Island_(4641195).jpg"],
+ wal_penarth1905:[1200,905,"Penarth promenade · c. 1905","The esplanade and the pier, with the Bristol Channel beyond.","Martin Ridley Collection, public domain",C+"Promenade,_Penarth_(4641562).jpg"],
+ wal_penarthcolor:[1400,1057,"Beach and pier, Penarth · 1890–1900","A photochrom: a black-and-white photograph printed in colour from several hand-prepared stones, sold to tourists as a souvenir.","Detroit Publishing Co., Photochrom Print Collection, Library of Congress, public domain",C+"Beach_and_pier,_Penarth,_Wales-LCCN2001703530.jpg"],
+ tac_okayama:[1400,1050,"Okayama, Japan · birthplace of tactile paving","A memorial where the first tactile blocks were laid in 1967, beside a yellow guidance strip.","Photo: Phronimoi, 2017, public domain",C+"Birthplace_of_tactile_paving_01.jpg"]
+};
+
+
+const G=[["IMG_8719",51.40926,-3.48167,"14:06"],["IMG_1112",51.40961,-3.48321,"14:08"],["IMG_1113",51.40981,-3.48353,"14:09"],["IMG_1114",51.40966,-3.4839,"14:10"],["IMG_1115",51.40959,-3.48395,"14:10"],["IMG_8725",51.40945,-3.48449,"14:11"],["IMG_8727",51.40949,-3.48519,"14:13"],["IMG_1118",51.40957,-3.48529,"14:14"],["IMG_1121",51.40999,-3.4851,"14:19"],["IMG_8731",51.40992,-3.48529,"14:19"],["IMG_1123",51.41068,-3.48655,"14:23"],["IMG_8733",51.41096,-3.48695,"14:24"],["IMG_1128",51.41123,-3.4869,"14:25"],["IMG_8740",51.41045,-3.48729,"14:36"],["IMG_8743",51.40818,-3.4878,"14:45"],["IMG_1130",51.40807,-3.4878,"14:45"],["IMG_8744",51.40825,-3.4875,"14:47"],["IMG_8746",51.40813,-3.48703,"14:47"],["IMG_8748",51.4084,-3.48212,"15:15"]];
+P.IMG_1128=["Llantwit Major · 23 Mar","The “nothing happened” plaque up close: cast metal, blue paint and scrolled corners, all the trappings of an official marker."];
+document.documentElement.lang='en';
+
+/* ---------- outside photos (public domain / openly licensed) ---------- */
+const CM='https://commons.wikimedia.org/wiki/File:';
+const WEB={
+ caillebotte:[2000,1553,"Paris · 1877","Gustave Caillebotte, Paris Street; Rainy Day. Haussmann's new boulevards cut wide, straight streets through old Paris, and Caillebotte painted Parisians crossing one in the rain.","Art Institute of Chicago, public domain",CM+"Gustave_Caillebotte_-_Paris_Street,_Rainy_Day_-_1964.336_-_Art_Institute_of_Chicago.jpg"],
+ royalarcade:[1400,1050,"Royal Arcade, Cardiff","An entrance to the Royal Arcade of 1858, Cardiff's oldest. From the street an arcade looks like one more shop door; inside, it's a whole lane.","Photo: Colin Smith, CC BY-SA 2.0",CM+"Cardiff_-_Royal_Arcade_-_geograph.org.uk_-_6688153.jpg"],
+ castlearcade:[1400,937,"Castle Arcade, Cardiff · 2022","The same passage as the photo above, dressed for Christmas: wooden oriel windows overhead, a glazed roof, and the same Troutmark Books sign further down.","Photo: Dominic Nelson, CC BY-SA 4.0",CM+"Castle_Arcade_interior,_Cardiff,_Nov_2022.jpg"],
+ spillers:[1050,1400,"Morgan Arcade, Cardiff","Spillers Records, founded in 1894 and recognised as the oldest record shop in the world. It moved into this slender wooden shopfront in 2010.","Photo: Heikki Immonen, CC BY 3.0",CM+"Spillers_Records,_27_Morgan_Arcade,_Cardiff.jpg"],
+ domes_ramp:[1400,934,"Asheville, North Carolina, USA","Brick-red truncated domes at a kerb ramp. The photographer notes that the domes on the far island were laid facing the wrong way.","Photo: Hleetranspo, CC BY 3.0",CM+"Step-Safe_Truncated_Domes.jpg"],
+ domes_platform:[640,480,"Alexandria, Virginia, USA · 2002","Truncated dome tiles along a train platform edge, the one symbol the ADA requires.","Photo: Ben Schumin, CC BY-SA 3.0",CM+"Truncated_dome_tiles.jpg"],
+ jp_tokyo:[1400,789,"Tokyo Station, Japan · 2024","Yellow guidance bars and warning dots lead through the station, taking a more jagged route than the painted signs for sighted people.","Photo: Ka23 13, CC BY-SA 4.0",CM+"Tokyo_station_20240904_100027.jpg"],
+ cn_shenzhen:[1400,1050,"Shenzhen, China · 2019","A blind lane in the Japanese style: yellow bars to follow, yellow dots where you should stop.","Photo: Mx. Granger, CC0",CM+"Tactile_paving_in_China_2.jpg"],
+ cn_bikes:[787,1400,"Beijing, China · 2017","Shared bikes parked on a blind lane on Guangqu Road, during the dockless bike boom.","Photo: 螺钉, CC BY-SA 4.0",CM+"2017%E5%B9%B411%E6%9C%888%E6%97%A5%E5%8C%97%E4%BA%AC%E5%B9%BF%E6%B8%A0%E8%B7%AF%E9%A6%96%E5%9F%8E%E5%9B%BD%E9%99%85%E5%89%8D%E5%8D%A0%E7%94%A8%E7%9B%B2%E9%81%93%E7%9A%84%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6.jpg"],
+ cn_huanggang:[1050,1400,"Huanggang, Hubei, China · 2018","A yellow blind lane down a tree-lined path beside Chibi Avenue, with bikes parked close by.","Photo: Walter Grassroot, CC0",CM+"%E6%B9%96%E5%8C%97%E9%BB%84%E5%86%88%E8%B5%A4%E5%A3%81%E5%A4%A7%E9%81%93%E6%97%81%E7%9A%84%E5%B0%8F%E9%81%93%E7%9B%B2%E9%81%93.jpg"],
+ grid1821:[1056,528,"The plan · 1821","John Randel's map of the commissioners' grid, drawn over farms and hills that mostly didn't exist as streets yet.","John Randel Jr., 1821, public domain",CM+"1821RandelMapWithGridWestSideLoCDetail.png"],
+ levittown:[940,707,"Levittown, Pennsylvania · 1950s","Curving streets of near-identical houses, built for families who would drive everywhere.","Public domain, via Wikimedia Commons",CM+"LevittownPA.jpg"],
+ artery:[1280,960,"Boston's Central Artery · 2003","Driving the elevated highway shortly before it came down. It ran along the edge of Chinatown for about half a century.","Photo: ArnoldReinhold, CC BY-SA 3.0",CM+"OnBostonsElevatedCentralArtery.agr.jpg"],
+ ldn_dragon:[1091,1400,"Gerrard Street, London · Lunar New Year 2007","A lion dance moves through the crowd in Chinatown.","Photo: CGP Grey, CC BY 2.0",CM+"2007-02-18_--_United_Kingdom_--_England_--_London_--_Chinese_New_Year_--_Dragon_4889812186.jpg"]
+};
+
+/* ---------- tactile paving by country ---------- */
+const COUNTRIES=[
+ {name:"Wales &amp; the UK",sw:"sw-blister",shots:[["img","IMG_1112"],["img","DSC_0738"],["img","DSC_0740"]],text:"A whole vocabulary of shapes. Blisters mark crossings, red where traffic is controlled and buff where it isn't. Bars across the path mean a hazard; bars along it mean follow this route."},
+ {name:"United States",sw:"sw-domes",shots:[["web","domes_ramp"],["web","domes_platform"]],text:"One symbol does most of the work: the truncated dome, required by the ADA at kerb ramps and platform edges since the early 1990s. It must contrast with the pavement, so it is often yellow, sometimes brick red."},
+ {name:"Japan",sw:"sw-jp",shots:[["web","jp_tokyo"],["arch","tac_okayama"]],text:"Where it began, in Okayama in 1967. Two shapes in bright yellow: dots mean stop and check, bars mean go this way. Long routes lead through stations and streets."},
+ {name:"China",sw:"sw-jp",shots:[["web","cn_shenzhen"],["web","cn_bikes"],["web","cn_huanggang"]],text:"The same yellow system as Japan, built at huge speed. Beijing alone laid more than 1,600 km, but lanes are often blocked by bikes, trees and poles, or lead nowhere."}
+];
+
+/* ---------- close readings: numbered hotspots on photos ---------- */
+const ANNOT={
+ castle:{src:'img/DSC_0746.jpg',w:1400,h:934,head:'Castle Arcade, Cardiff',alt:'Inside the Castle Arcade: glazed roof, lanterns, white oriel windows, a footbridge and café chairs.',
+  note:'Photo: Eric Zhang. The Troutmark Books sign in the distance places this in the Castle Arcade.',
+  dots:[[51.4,7,'A glass roof','A single span of glass in a wooden frame lights the passage from above. Arcade builders took the idea from Victorian railway sheds.'],
+        [37,18,'Oriel windows','White wooden oriel windows jut out from the first floor, as if the shops were houses on a narrow lane.'],
+        [54,48.5,'“To the balcony”','Footbridges cross the arcade at first-floor level, and a gallery of shops runs upstairs. The listing notes the bridges’ iron railings are patterned with ivy leaves.'],
+        [85,16,'Hanging signs','Signboards hang at right angles over the doors, so you can read them as you walk down the passage, like an old high street.'],
+        [73,87,'An outdoor room','No traffic and no rain, so the café puts its chairs out. An arcade is a street that behaves like a room.']]},
+ morgan:{src:'img/DSC_0742.jpg',w:1400,h:934,head:'Morgan Arcade, Cardiff',alt:'The entrance to the Morgan Arcade under its name panel, with jewellery shop windows either side.',
+  note:'Photo: Eric Zhang.',
+  dots:[[22,8,'A camera on the cornice','A CCTV camera bolted to the Victorian frame. An arcade is private property, watched and managed like a shop.'],
+        [49,13.5,'The name over the door','Lettered like a shop sign. It opened in 1899 as the New Central Arcade and later took the Morgan family name.'],
+        [33,45,'Original shopfronts','Tall, slender wooden frames with as much glass as possible. Some of these Victorian fronts survived the 2007–08 refurbishment.'],
+        [46,74,'Stone underfoot','Grey stone flags inside, granite outside, and barely a step between: walking in feels like turning down a side street.'],
+        [70.5,52,'Doors that fold away','Folding doors stand open in the day, covered in notices about CCTV and smoking. A public street never closes; an arcade can.']]},
+ gielgud:{src:'img/DSC_0757.jpg',w:1400,h:934,head:'Gielgud Theatre, Shaftesbury Avenue',alt:'The Gielgud Theatre at dusk with its rounded stone corner, and the Sondheim Theatre at the far end of the block.',
+  note:'Photo: Eric Zhang. Number plates blurred.',
+  dots:[[35.5,17,'A bowed corner','Giant Ionic columns run through two floors of the rounded corner. Above the cornice, out of frame, a short round tower with a stone dome makes the theatre a landmark from both streets.'],
+        [49.2,18.5,'Bull’s-eye windows','Round windows light the top floor of a Portland stone front, in a “Free Baroque style with some French features”, as the listing puts it.'],
+        [25.7,50.5,'Lights for the show','The stone stays; the show changes. Light boxes, a canopy and a hanging blade sign are swapped for every production.'],
+        [68,33,'The middle of the block','The two theatres stand at either end of one island block like bookends. Sprague designed the building between them too.'],
+        [84,44,'The twin','The Queen’s, now the Sondheim, opened in 1907. A bomb on 24 September 1940 wrecked its front, and it reopened in 1959 behind a glass curtain wall.']]},
+ london:{src:'img/DSC_0764.jpg',w:1400,h:934,head:'A gate on Gerrard Street, London',alt:'A Chinatown gate on Gerrard Street with a tiled roof, red posts, an inscription board and a festival banner, under strings of red lanterns.',
+  note:'Photo: Eric Zhang.',
+  dots:[[49.3,43.4,'<span lang="zh-Hant">倫敦華埠</span>','“London Chinatown”, in traditional characters, read from right to left as on old Chinese signboards.'],
+        [37,15,'Roof and ridge beasts','Tiles on a lattice frame, with upturned ends and small beasts guarding the ridge.'],
+        [26.4,55.7,'A couplet on each post','Two vertical boards carry a pair of matching lines of verse, as on the doorway of a traditional Chinese building.'],
+        [60,58,'Whose banner?','A Mid-Autumn Festival banner, with a rabbit and mooncakes, carries the logos of Hong Kong’s trade office in London and China’s national tourist office.'],
+        [85,33,'A ceiling of lanterns','Strings of red lanterns cross the whole street, turning it into an outdoor room.'],
+        [61.4,88.9,'Cantonese first','“Cantonese &amp; Peking cuisine, dim sum”: the menu of a Chinatown built largely by families from Hong Kong.']]},
+ boston:{src:'img/IMG_9500.jpg',w:1050,h:1400,head:'The gate on Beach Street, Boston',alt:'Boston’s Chinatown gate with green tiled roofs, the inscription 天下為公, and US and ROC flags hanging underneath.',
+  note:'Photo: Eric Zhang, 15 June 2026.',
+  dots:[[46,50.5,'<span lang="zh-Hant">天下為公</span>','“All under heaven is for the people”, a line from the Confucian Book of Rites that Sun Yat-sen, founder of the Republic of China, made his motto. The other side reads <span lang="zh-Hant">禮義廉恥</span>: propriety, justice, integrity, honour.'],
+        [33,36,'Green tiles, upturned eaves','Two tiers of green-tiled roofs, with small figures standing on the ridges.'],
+        [46,58.5,'Two flags','The Stars and Stripes beside the flag of the Republic of China (Taiwan), hung right under the inscription. More fly from the rooftop behind.'],
+        [80,77,'A guardian lion','A stone lion stands on each side of the gate, the traditional guards of a Chinese doorway.'],
+        [88,66,'The street behind','Hot pot, milk tea, Chinese medicine: signs in two languages on a working street, not just a monument.']]},
+ tenement:{src:'img/DSC_0547.jpg',w:1400,h:934,head:'Mott Street, New York',alt:'A neon welcome sign in English and Chinese strung across Mott Street between brick tenements with fire escapes.',
+  note:'Photo: Eric Zhang.',
+  dots:[[30,39,'Simplified script','The welcome sign spells <span lang="zh-Hans">欢迎来到华埠</span> in simplified characters, the official script of mainland China and of many newer arrivals.'],
+        [91,62,'Traditional script','Big Wong’s banner, <span lang="zh-Hant">大旺飯店</span>, uses traditional characters, the script of Hong Kong, Taiwan and the older Cantonese community. Two scripts, two eras of migration, one block.'],
+        [54,64,'Fire escapes','Iron balconies on every floor, joined by steep stairs, required on tenements from 1867.'],
+        [84,17,'Window air-conditioners','Today’s answer to the hot nights when families slept out on the fire escapes.'],
+        [35,74,'A dressed-up front','Carved window heads and a heavy cornice: even cheap tenements put on a respectable face for the street.']]},
+ k6:{src:'img/IMG_8773.jpg',w:1050,h:1400,head:'The Esplanade, Penarth',alt:'A weathered red K6 telephone box with a crown and a TELEPHONE sign, a turreted seafront building behind.',
+  note:'Photo: Eric Zhang, 25 March 2026.',
+  dots:[[33,30.5,'The dome','The curved roof came from Scott’s bigger K2 box. It is often compared to the tomb Sir John Soane designed for his family in St Pancras, though historians doubt Scott copied it.'],
+        [50.5,35.5,'The crown','A crown in relief, because the phone network belonged to the Post Office, a government department. This one looks like the Tudor crown used until 1953; later boxes got St Edward’s crown.'],
+        [64,42.5,'TELEPHONE','A glazed sign, lit from inside so you could find the box at night.'],
+        [52,73,'Eight rows of glass','The K2 had six rows of three equal panes. The K6 has eight, with a wider pane in the middle, so it is easier to see in and out.'],
+        [21,49,'Red, again and again','Cast iron rusts, so the boxes are repainted over and over. Here the layers are peeling in the sea air.'],
+        [84,40,'A seaside turret','Behind, a seafront block with a pointed turret, in keeping with Penarth’s past as a Victorian resort.']]}
+};
+
+/* ---------- satellite maps ---------- */
+const SAT_CREDIT='EOxCloudless 2024 · EOX IT Services GmbH · contains modified Copernicus Sentinel data 2024';
+const SAT={
+ world:{src:'sat/world.jpg',w:1600,h:562,b:[-110,8,150,70],
+   pins:[[-3.4,51.45,'Wales','where-uk','l'],[-0.13,51.51,'London','theatres','t'],[-74.0,40.72,'New York','chinatowns','b'],[-71.06,42.35,'Boston','chinatowns','t'],[133.92,34.66,'Okayama','underfoot','t','small minor']],
+   arcs:[[[-0.13,51.51],[-74.0,40.72]],[[-0.13,51.51],[-71.06,42.35]]],
+   labels:[[-40,36,'Atlantic Ocean','water']],scale:null,mview:[-80,32,14,62]},
+ uk:{src:'sat/uk.jpg',w:1400,h:668,b:[-5.4,50.55,1.0,52.45],
+   pins:[[-3.18,51.48,'Cardiff &amp; the Vale','where-vale','b'],[-0.13,51.51,'London','theatres','t']],
+   labels:[[-3.75,52.2,'Wales',''],[-1.5,52.15,'England',''],[-4.1,51.2,'Bristol Channel','water'],[-1.0,50.62,'English Channel','water']],scale:[50,'50 km']},
+ us:{src:'sat/us.jpg',w:1400,h:1006,b:[-75.2,40.25,-69.6,43.25],
+   pins:[[-73.998,40.7155,'Manhattan Chinatown','chinatowns','r'],[-71.0596,42.3511,'Boston Chinatown','chinatowns','l']],
+   labels:[[-71.6,40.65,'Atlantic Ocean','water'],[-73.2,42.9,'United States','']],scale:[100,'100 km']},
+ vale:{src:'sat/vale.jpg',w:1400,h:682,b:[-3.64,51.355,-3.08,51.525],
+   pins:[[-3.4865,51.4085,'Llantwit Major<small>23 Mar</small>','walk','l'],[-3.4472,51.4617,'Cowbridge<small>24 Mar</small>','messages','t'],[-3.2733,51.3913,'Barry Island<small>25 Mar</small>','edges','b'],[-3.1676,51.4351,'Penarth<small>25 Mar</small>','edges','r'],[-3.1791,51.4816,'Cardiff<small>26 Mar</small>','landmarks','t']],
+   route:[[-3.4865,51.4085],[-3.4472,51.4617],[-3.2733,51.3913],[-3.1676,51.4351],[-3.1791,51.4816]],
+   labels:[[-3.40,51.375,'Bristol Channel','water']],scale:[5,'5 km']},
+ llantwit:{src:'sat/llantwit.jpg',w:1400,h:954,b:[-3.505,51.401,-3.465,51.418],walk:true,scale:[0.5,'500 m'],
+   labels:[[-3.4800,51.4155,'Llantwit Major','']]},
+ london:{src:'sat/london.jpg',w:1400,h:441,b:[-0.165,51.497,-0.012,51.527],
+   pins:[[-0.1317,51.5115,'Chinatown &amp; Theatreland<small>Soho, since the 1950s</small>','theatres','b'],[-0.0290,51.5108,'Limehouse<small>first Chinatown, 1880s–1940s</small>','chinatowns','b']],
+   route:[[-0.0290,51.5108],[-0.1317,51.5115]],dashed:true,
+   labels:[[-0.075,51.5045,'River Thames','water']],scale:[2,'2 km']},
+ manhattan:{src:'sat/manhattan.jpg',w:758,h:1000,b:[-74.035,40.695,-73.925,40.805],
+   pins:[[-73.998,40.7155,'Chinatown','chinatowns','l'],[-73.9926,40.7246,'Houston St<small>grid begins north of here</small>','grids','r','minor'],[-73.9654,40.7829,'Central Park','grids','r','minor']],
+   labels:[[-74.02,40.735,'Hudson River','water']],scale:[2,'2 km']},
+ boston:{src:'sat/boston.jpg',w:1400,h:1010,b:[-71.085,42.338,-71.040,42.362],
+   pins:[[-71.0596,42.3511,'Chinatown gate','gates','t'],[-71.0656,42.3550,'Boston Common','grids','l','minor'],[-71.0552,42.3523,'South Station','grids','r','minor']],
+   labels:[],scale:[0.5,'500 m']},
+ iowa:{src:'sat/iowa.jpg',w:1200,h:728,b:[-93.8,41.963204,-93.5,42.098435],
+   pins:[[-93.6319,42.0308,'Ames, Iowa','grids','r']],labels:[],scale:[5,'5 km']},
+ valefields:{src:'sat/valefields.jpg',w:1200,h:728,b:[-3.66,51.40,-3.303,51.535],
+   pins:[[-3.4472,51.4617,'Cowbridge','messages','r'],[-3.4865,51.4085,'Llantwit Major','walk','t']],labels:[],scale:[5,'5 km']}
+};
+
+/* ---------- chapters ---------- */
+const CH=[['prologue','Prologue',''],['underfoot','Underfoot','I'],['grids','City plans','II'],['built-for','Built for whom','III'],['chinatowns','Chinatowns','IV'],['theatres','Theatreland','V'],['landmarks','Arches &amp; arcades','VI'],['memory','Plaques','VII'],['messages','Messages','VIII'],['edges','Edges','IX'],['archives','Archive','X']];
+
+/* ---------- helpers ---------- */
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const ME='Photo: Eric Zhang';
+
+/* lightbox */
+const lb=document.getElementById('lb');
+function openLB(src,cap,tag,credit){const i=document.getElementById('lb-img');i.src=src;i.alt=cap||'';document.getElementById('lb-cap').textContent=(tag?tag+' · ':'')+(cap||'');document.getElementById('lb-credit').textContent=credit||'';lb.showModal();}
+document.getElementById('lb-close').onclick=()=>lb.close();
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close();});
+
+/* ---------- satellite renderer ---------- */
+const R=6378137,rad=Math.PI/180;
+const MX=lon=>R*lon*rad, MY=lat=>R*Math.log(Math.tan(Math.PI/4+lat*rad/2));
+function proj(m,lon,lat){const [a,b,c,d]=m.b;return [(MX(lon)-MX(a))/(MX(c)-MX(a))*100,(MY(d)-MY(lat))/(MY(d)-MY(b))*100];}
+function gc(p,q,n=64){const toV=([lo,la])=>[Math.cos(la*rad)*Math.cos(lo*rad),Math.cos(la*rad)*Math.sin(lo*rad),Math.sin(la*rad)];const A=toV(p),B=toV(q);const om=Math.acos(A[0]*B[0]+A[1]*B[1]+A[2]*B[2]);const out=[];for(let i=0;i<=n;i++){const t=i/n,s1=Math.sin((1-t)*om)/Math.sin(om),s2=Math.sin(t*om)/Math.sin(om);const v=[A[0]*s1+B[0]*s2,A[1]*s1+B[1]*s2,A[2]*s1+B[2]*s2];out.push([Math.atan2(v[1],v[0])/rad,Math.atan2(v[2],Math.hypot(v[0],v[1]))/rad]);}return out;}
+function renderSat(fig){
+  const key=fig.dataset.sat,base=SAT[key];if(!base)return;
+  const small=matchMedia('(max-width:560px)').matches;
+  const m=Object.assign({},base);
+  let crop=null;
+  if(small&&base.mview){const [a,b,c,d]=base.b,[va,vb,vc,vd]=base.mview;
+    crop={x0:(MX(va)-MX(a))/(MX(c)-MX(a)),x1:(MX(vc)-MX(a))/(MX(c)-MX(a)),y0:(MY(d)-MY(vd))/(MY(d)-MY(b)),y1:(MY(d)-MY(vb))/(MY(d)-MY(b))};
+    m.b=base.mview;m.labels=(base.labels||[]).filter(l=>l[0]>=va&&l[0]<=vc&&l[1]>=vb&&l[1]<=vd);}
+  const NS='http://www.w3.org/2000/svg';
+  const sf=document.createElement('div');sf.className='sf';
+  const img=document.createElement('img');img.src=m.src;img.width=m.w;img.height=m.h;img.loading='lazy';img.decoding='async';img.alt='Satellite view'+(key==='world'?' of the North Atlantic and Eurasia':'');
+  if(crop){const fw=crop.x1-crop.x0,fh=crop.y1-crop.y0;sf.style.aspectRatio=(m.w*fw)/(m.h*fh);img.style.position='absolute';img.style.maxWidth='none';img.style.width=(100/fw)+'%';img.style.height='auto';img.style.left=(-crop.x0/fw*100)+'%';img.style.top=(-crop.y0/fh*100)+'%';}
+  sf.append(img);
+  const svg=document.createElementNS(NS,'svg');svg.setAttribute('viewBox','0 0 100 100');svg.setAttribute('preserveAspectRatio','none');svg.setAttribute('aria-hidden','true');
+  const poly=(pts,cls)=>{const e=document.createElementNS(NS,'polyline');e.setAttribute('points',pts.map(p=>proj(m,p[0],p[1]).map(v=>v.toFixed(3)).join(',')).join(' '));e.setAttribute('class',cls);svg.append(e);return e;};
+  (m.arcs||[]).forEach(([p,q])=>poly(gc(p,q),'arc'));
+  if(m.route){poly(m.route,'route-shadow');const e=poly(m.route,'route');if(m.dashed)e.setAttribute('stroke-dasharray','2 8');}
+  if(m.walk){const pts=G.map(g=>[g[2],g[1]]);poly(pts,'route-shadow');poly(pts,'route');}
+  sf.append(svg);
+  (m.labels||[]).forEach(([lon,lat,t,c])=>{const [x,y]=proj(m,lon,lat);const l=document.createElement('span');l.className='lbl '+(c||'');l.style.left=x+'%';l.style.top=y+'%';l.textContent=t;sf.append(l);});
+  (m.pins||[]).forEach(([lon,lat,t,go,side,extra])=>{const [x,y]=proj(m,lon,lat);const a=document.createElement('a');a.className='pin '+(side||'r')+(extra?' '+extra:'');a.href='#'+go;a.style.left=x+'%';a.style.top=y+'%';a.innerHTML=`<i></i><span>${t}</span>`;a.setAttribute('aria-label',t.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&'));sf.append(a);});
+  if(m.walk){G.forEach((g,i)=>{const [x,y]=proj(m,g[2],g[1]);const b=document.createElement('button');b.type='button';b.className='pin'+(i===0?' first':'');b.style.left=x+'%';b.style.top=y+'%';const p=P[g[0]];b.setAttribute('aria-label','Photo at '+g[3]+(p?': '+p[1]:''));b.title=g[3]+(p?' · '+p[1]:'');b.innerHTML='<i></i>';b.addEventListener('click',()=>{openLB('img/'+g[0]+'.jpg',p?p[1]:'',p?p[0]:'Llantwit Major · '+g[3],ME);});sf.append(b);});
+    const st=proj(m,G[0][2],G[0][1]);const s=document.createElement('span');s.className='pin r';s.style.left=st[0]+'%';s.style.top=st[1]+'%';s.innerHTML='<span>Start 14:06<small>station</small></span>';s.setAttribute('aria-hidden','true');sf.append(s);
+    const en=proj(m,G[G.length-1][2],G[G.length-1][1]);const e=document.createElement('span');e.className='pin b';e.style.left=en[0]+'%';e.style.top=en[1]+'%';e.innerHTML='<span>End 15:15</span>';e.setAttribute('aria-hidden','true');sf.append(e);}
+  if(m.scale){const [km,t]=m.scale;const [a,,c]=m.b;const lat=(m.b[1]+m.b[3])/2;const widthKm=(c-a)*111.32*Math.cos(lat*rad);const pct=km/widthKm*100;const s=document.createElement('div');s.className='scale';s.style.width=pct.toFixed(2)+'%';s.innerHTML=`<b></b>${t}`;sf.append(s);}
+  fig.prepend(sf);
+  const cr=document.createElement('div');cr.className='sat-credit';cr.innerHTML=`<a href="https://cloudless.eox.at" target="_blank" rel="noopener">${SAT_CREDIT}</a> · CC BY-NC-SA 4.0`;sf.after(cr);
+}
+document.querySelectorAll('figure.sat[data-sat]').forEach(renderSat);
+
+/* ---------- photo galleries (bigger, two columns) ---------- */
+function photoFig(id){
+  const p=P[id];if(!p)return null;
+  const [wd,ht]=S[id]||[1400,1050];
+  const f=document.createElement('figure');f.className='ph';
+  f.innerHTML=`<button type="button" aria-label="Enlarge photo"><img loading="lazy" decoding="async" src="img/${id}.jpg" width="${wd}" height="${ht}" alt="${esc(p[1])}"></button><figcaption><span class="tag">${esc(p[0])}</span>${esc(p[1])}</figcaption>`;
+  f.querySelector('button').addEventListener('click',()=>openLB('img/'+id+'.jpg',p[1],p[0],ME));
+  return f;
+}
+document.querySelectorAll('.gallery[data-ids]').forEach(w=>{
+  const ids=w.dataset.ids.split(',');
+  ids.forEach((id,i)=>{const f=photoFig(id);if(!f)return;const [wd,ht]=S[id]||[1400,1050];if(i===0&&ids.length>=3&&wd>ht)f.classList.add('wide');w.append(f);});
+});
+
+/* ---------- archive prints, outside photos, and photo prints ---------- */
+function printFig(src,a){
+  const f=document.createElement('figure');f.className='print';
+  f.innerHTML=`<button class="zoom" type="button" aria-label="Enlarge image"><img loading="lazy" decoding="async" src="${src}" width="${a[0]}" height="${a[1]}" alt="${esc(a[3])}"></button><figcaption><span class="tag">${esc(a[2])}</span>${esc(a[3])}<span class="credit">${esc(a[4])}${a[5]?` · <a href="${a[5]}" target="_blank" rel="noopener">Source ↗</a>`:''}</span></figcaption>`;
+  f.querySelector('button').addEventListener('click',()=>openLB(src,a[3],a[2],a[4]));
+  return f;
+}
+document.querySelectorAll('.prints').forEach(w=>{
+  (w.dataset.arch||'').split(',').filter(Boolean).forEach(id=>{const a=A[id];if(a)w.append(printFig('arch/'+id+'.jpg',a));});
+  (w.dataset.web||'').split(',').filter(Boolean).forEach(id=>{const a=WEB[id];if(a)w.append(printFig('web/'+id+'.jpg',a));});
+  (w.dataset.ids||'').split(',').filter(Boolean).forEach(id=>{const p=P[id];if(!p)return;const [wd,ht]=S[id]||[1400,1050];w.append(printFig('img/'+id+'.jpg',[wd,ht,p[0],p[1],ME,'']));});
+});
+
+/* ---------- then / now pairs ---------- */
+document.querySelectorAll('.tn[data-pair]').forEach(t=>{
+  const [aid,pid,ly,ry]=t.dataset.pair.split('|');const a=A[aid],p=P[pid];if(!a||!p)return;
+  t.innerHTML=`<figure class="then"><button class="zoom" type="button" aria-label="Enlarge archive image"><span class="frame2"><img loading="lazy" decoding="async" src="arch/${aid}.jpg" alt="${esc(a[3])}"><span class="yr">${esc(ly)}</span></span></button><figcaption>${esc(a[3])}<span class="credit">${esc(a[4])} · <a href="${a[5]}" target="_blank" rel="noopener">Source ↗</a></span></figcaption></figure>
+  <figure class="now"><button class="zoom" type="button" aria-label="Enlarge photo"><span class="frame2"><img loading="lazy" decoding="async" src="img/${pid}.jpg" alt="${esc(p[1])}"><span class="yr">${esc(ry)}</span></span></button><figcaption>${esc(p[1])}</figcaption></figure>`;
+  const b=t.querySelectorAll('button');
+  b[0].addEventListener('click',()=>openLB('arch/'+aid+'.jpg',a[3],a[2],a[4]));
+  b[1].addEventListener('click',()=>openLB('img/'+pid+'.jpg',p[1],p[0],ME));
+});
+
+/* ---------- tactile paving by country ---------- */
+(function(){
+  const box=document.getElementById('countries');if(!box)return;
+  const info=(kind,id)=>kind==='img'?{src:'img/'+id+'.jpg',cap:P[id][1],tag:P[id][0],cr:ME}:kind==='web'?{src:'web/'+id+'.jpg',cap:WEB[id][3],tag:WEB[id][2],cr:WEB[id][4]}:{src:'arch/'+id+'.jpg',cap:A[id][3],tag:A[id][2],cr:A[id][4]};
+  COUNTRIES.forEach(c=>{
+    const art=document.createElement('article');art.className='country rv';
+    const shots=document.createElement('div');shots.className='shots'+(c.shots.length===2?' two':'');
+    c.shots.forEach(s=>{const d=info(s[0],s[1]);const b=document.createElement('button');b.type='button';b.className='zoom';b.setAttribute('aria-label','Enlarge photo');b.innerHTML=`<img loading="lazy" decoding="async" src="${d.src}" alt="${esc(d.cap)}">`;b.addEventListener('click',()=>openLB(d.src,d.cap,d.tag,d.cr));shots.append(b);});
+    const credits=[...new Set(c.shots.map(s=>info(s[0],s[1]).cr))].join(' · ');
+    art.append(shots);
+    const body=document.createElement('div');body.className='body';
+    body.innerHTML=`<h4><span class="sw ${c.sw}" aria-hidden="true"></span>${c.name}</h4><p>${c.text}</p><span class="credit">${esc(credits)}</span>`;
+    art.append(body);box.append(art);
+  });
+})();
+
+/* ---------- close readings ---------- */
+document.querySelectorAll('.annot[data-annot]').forEach(box=>{
+  const key=box.dataset.annot,d=ANNOT[key];if(!d)return;
+  if(!box.id)box.id='read-'+key;
+  if(d.h>d.w)box.classList.add('portrait');
+  const pic=document.createElement('div');pic.className='pic';
+  pic.innerHTML=`<img loading="lazy" decoding="async" src="${d.src}" width="${d.w}" height="${d.h}" alt="${esc(d.alt)}">`;
+  const side=document.createElement('div');side.className='alist';
+  side.innerHTML=`<p class="ahead"><span class="tag">Close reading</span>${esc(d.head)}<small>Tap a number on the photo, or hover a note.</small></p>`;
+  const ol=document.createElement('ol');
+  const dots=[],items=[];
+  let pinned=-1;
+  const set=i=>{dots.forEach((x,j)=>x.classList.toggle('on',j===i));items.forEach((x,j)=>x.classList.toggle('on',j===i));};
+  const rest=()=>set(pinned);
+  d.dots.forEach(([x,y,t,txt],i)=>{
+    const b=document.createElement('button');b.type='button';b.className='dot';b.textContent=i+1;b.style.left=x+'%';b.style.top=y+'%';
+    b.setAttribute('aria-label',`${i+1}: ${t.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&')}`);b.setAttribute('aria-describedby',`an-${key}-${i}`);
+    b.addEventListener('mouseenter',()=>set(i));b.addEventListener('mouseleave',rest);
+    b.addEventListener('focus',()=>set(i));b.addEventListener('blur',rest);
+    b.addEventListener('click',()=>{pinned=pinned===i?-1:i;set(pinned===-1?i:pinned);b.setAttribute('aria-pressed',pinned===i);if(matchMedia('(max-width:820px)').matches)items[i].scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});});
+    pic.append(b);dots.push(b);
+    const li=document.createElement('li');li.id=`an-${key}-${i}`;li.innerHTML=`<span><b>${t}</b>${txt}</span>`;
+    li.addEventListener('mouseenter',()=>set(i));li.addEventListener('mouseleave',rest);
+    li.addEventListener('click',()=>{pinned=pinned===i?-1:i;rest();});
+    ol.append(li);items.push(li);
+  });
+  side.append(ol);
+  const note=document.createElement('p');note.className='anote';note.textContent=d.note;
+  box.append(pic,side,note);
+});
+
+/* ---------- index: hero frame, side index, mobile sheet ---------- */
+const ixHTML=CH.map(([id,t,n])=>`<li><a href="#${id}" data-ch="${id}"><span class="t">${t}</span><span class="lead" aria-hidden="true"></span><span class="num">${n}</span></a></li>`).join('');
+document.getElementById('ix-list').innerHTML=ixHTML;
+document.getElementById('ix-list-m').innerHTML=ixHTML;
+document.getElementById('frame-list').innerHTML=CH.filter(c=>c[2]).map(([id,t,n])=>`<li><a href="#${id}">${t}<span>${n}</span></a></li>`).join('');
+
+const sheet=document.getElementById('sheet');
+document.getElementById('open-index').addEventListener('click',()=>sheet.showModal());
+document.getElementById('close-index').addEventListener('click',()=>sheet.close());
+sheet.addEventListener('click',e=>{if(e.target.closest('a'))sheet.close();});
+
+/* active chapter */
+const ixLinks=[...document.querySelectorAll('[data-ch]')];
+function setActive(id){ixLinks.forEach(a=>{if(a.dataset.ch===id)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});}
+const secs=[...document.querySelectorAll('[data-chapter]')];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)setActive(e.target.dataset.chapter);});},{rootMargin:'-45% 0px -54% 0px'});
+secs.forEach(s=>io.observe(s));
+
+/* show the index after the hero; switch it to light text over dark photographs */
+const index=document.getElementById('index');
+const ixParts=[...index.children];
+const darks=[...document.querySelectorAll('.hero,.opener')];
+const foot=document.querySelector('footer');
+let ticking=false;
+function onScroll(){
+  ticking=false;
+  document.body.classList.toggle('past-hero',scrollY>innerHeight*.55);
+  document.body.classList.toggle('at-end',foot.getBoundingClientRect().top<innerHeight-60);
+  const rs=darks.map(el=>el.getBoundingClientRect());
+  ixParts.forEach(part=>{const r=part.getBoundingClientRect();const y=r.top+r.height/2;part.classList.toggle('on-dark',rs.some(d=>d.top<=y&&d.bottom-40>=y));});
+}
+addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});
+onScroll();
+
+/* giant chapter titles: shrink any that would run off the page */
+function fitTitles(){
+  document.querySelectorAll('.op-title').forEach(t=>{
+    t.style.fontSize='';
+    const r=document.createRange();r.selectNodeContents(t);
+    const w=r.getBoundingClientRect().width,avail=t.clientWidth*.97;
+    if(w>avail){const fs=parseFloat(getComputedStyle(t).fontSize);t.style.fontSize=(fs*avail/w).toFixed(1)+'px';}
+  });
+}
+fitTitles();
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitTitles);
+let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(fitTitles,120);});
+</script>
+</body>
+</html>
